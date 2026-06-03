@@ -50,11 +50,16 @@ Deep context and all decisions are indexed in `@docs/README.md`.
 
 ## How we work
 
+- **Right-size first.** Execution / reversible / obvious work → just do it well, no
+  ceremony. Product *decisions* (what to build, how it feels, hard-to-reverse) →
+  run the full arc. When unsure, run the arc.
 - **Build through the arc, in cycles:** aim with the **Heading** → **Ritual**
   (dream: frame, design, stamp the Gate Card with debts) → **Altar** (ground:
   prove the smallest thing, discharge the debts, or FALSIFY) → **Magic** (ship the
   smallest whole; the founder observes the five-second spark) → **RECORD**. Full
   spine: `.ritual/framework/04-development-loop.md`.
+- **Red-team before SHIP.** On significant decisions, run one adversarial pass on
+  your own Gate Card (inflated rung? case for KILL? what's missing?) and revise.
 - **Run the synthesis order** on every significant decision:
   desirability → feasibility → deliverability → viability. Each is a gate, not a
   vote. **Vision breaks ties** (taste); on the Altar **truth breaks ties.**

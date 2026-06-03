@@ -23,6 +23,12 @@ Date: YYYY-MM-DD · Verdict: **SHIP | LOOP | KILL** · Led by: <method>
 - **Tension:** *where methods genuinely conflicted*
 - **Tie-break:** *if two paths both passed — how vision chose; else "converged"*
 
+## Red-team (one adversarial pass before SHIP)
+
+- **Most-inflated rung:** *the gate claiming more evidence than it has — knocked down, or defended*
+- **Strongest case for KILL:** *argue in good faith why this shouldn't exist; if half-convincing, don't SHIP*
+- **What we missed:** *the worst-day user, the failure mode, the cheaper thing that makes this unnecessary*
+
 ## Verdict & debt
 
 - **Verdict:** **SHIP** / **LOOP** (→ back to which step) / **KILL** (and why it's a win)

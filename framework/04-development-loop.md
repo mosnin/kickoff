@@ -6,8 +6,24 @@
 > and the bar.
 
 Foundation laid, methods lit, context wired. Now you build — but not the way a cold
-assistant builds. Every cycle runs the whole arc, so the product stays
-revolutionary as it grows instead of decaying into a pile of features.
+assistant builds. Every *decision* runs the whole arc (small execution work does
+not — see right-size below), so the product stays revolutionary as it grows
+instead of decaying into a pile of features.
+
+## Right-size first (before anything else)
+
+The full arc is for **decisions**, not for every keystroke. Ceremony on trivial
+work is its own waste. So triage in one breath:
+
+- **Execution / reversible / obvious** — a bug fix, a rename, a clear small change.
+  → **Skip the arc.** Apply the standing operating rules and just do it well. No
+  gates, no Gate Card. The best step is no step.
+- **A product decision — what to build, how it should feel, what to commit to,
+  anything hard to reverse or that sets direction.** → **Run the full arc below.**
+
+When unsure, treat it as a decision and run the arc. This keeps the rigor where it
+pays and lifts the tax where it doesn't — the framework should never slow down the
+work it isn't for.
 
 ## The cycle
 
@@ -45,6 +61,10 @@ Where each lives is in `methods/README.md`; don't duplicate it here.
 
 ## The hand-offs (where cycles usually break)
 
+- **Before SHIP — red-team the card.** On any significant decision, run one
+  adversarial pass against your own Gate Card (which rung is inflated? strongest
+  case for KILL? what did we miss?) and revise before stamping. It's the nearest
+  thing to the outside check the model lacks. Full method: `framework/05-the-gate-card.md`.
 - **Ritual → Altar:** the Gate Card is the membrane. The Ritual is *allowed* to
   leave gates at REASONED — but it must write them down as debts. A card with no
   debts and no OBSERVED evidence is a vibe, not a decision.

@@ -141,6 +141,28 @@ you will ever make.
 
 ---
 
+## The adversarial pass — red-team before you stamp SHIP
+
+You are both the one who proposes the decision and the one who grades it — a closed
+loop with no outside check. So before a significant card is stamped **SHIP**, turn
+on yourself for one honest pass and *attack the card*:
+
+- **Which rung is inflated?** Find the gate most likely claiming more evidence than
+  it has, and knock it down a rung unless it truly holds.
+- **What's the strongest case for KILL?** Argue, in good faith, why this should not
+  exist. If the case is even half-convincing, you have not earned SHIP.
+- **What did we not consider?** The user on their worst day, the failure mode, the
+  cheaper thing that makes this unnecessary.
+
+Then revise the card with what you found. This is cheap, it's fast, and it's the
+nearest thing to the external grader the system lacks (the founder is the real one
+— see `../methods/README.md`). It exists because models are sycophantic and
+confident: this pass is where the framework catches *itself* shipping the unproven,
+and it's how the KILL muscle actually gets used instead of admired. Keep it brief,
+and run it on significant cards — not on right-sized small work.
+
+---
+
 ## The cards compound
 
 Judgment is the asset, and the cards are how it accumulates. Over time they become
