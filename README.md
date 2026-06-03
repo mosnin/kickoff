@@ -124,7 +124,7 @@ Open Claude. It performs the Ritual on your repo.
 ```
 1 · LIGHT THE METHODS   The five ways of thinking come online.
 2 · WRITE THE MEMORY     Your project's CLAUDE.md is authored.
-3 · TAKE IN FOUNDATION   You hand over brand, value prop, PRD, UX — it wires them in.
+3 · TAKE IN FOUNDATION   You hand over the North Star, brand, value prop, PRD, UX — it wires them in.
 4 · BUILD THE SPINE      A docs/ context system so the product grows without drift.
 5 · BUILD                Development begins — every cycle runs the gates and
                          stamps a Gate Card backed by real evidence.

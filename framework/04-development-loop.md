@@ -127,8 +127,8 @@ conflict, hold the tension and let vision break the tie. Desirability may return
 
 ## 7 · RECORD — update memory *(whoever owns the subtree)*
 
-- Stamp a Gate Card for any significant decision (Framework 05): the four gate
-  verdicts, the evidence rung behind each, the tie-break, the verdict, the debt.
+- File the Gate Card from step 6 into `docs/decisions/`, and roll its lesson into
+  `docs/decisions/README.md` (a pattern that keeps passing, a debt owed, or a kill).
 - Update the affected `docs/` files and `docs/README.md`.
 - Update `CLAUDE.md` if the change touches identity, stack, or structure.
 - **Treat undocumented decisions as not done.** Memory is part of the deliverable.

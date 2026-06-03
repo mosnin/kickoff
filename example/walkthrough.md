@@ -114,6 +114,13 @@ Notice the card is honest: three gates reached real evidence; one is still
 *reasoned*, so it's flagged as debt to pay before scale — not hand-waved into a ✅.
 That honesty is the difference between a verdict and a vibe.
 
+This card shows a *mature* slice — the beta users and logs are real because the
+evidence was actually gathered. On a first build there'd be none of that yet: the
+honest move is to mark Desirable and Viable as **REASONED — owed to reality** and
+hand the missing evidence back to the human ("needs 5 real first-runs"), never to
+invent an OBSERVED rung. A claimed rung you didn't reach is the one unforgivable
+act; honest debt is fine.
+
 ---
 
 ## The gap
