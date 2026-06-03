@@ -52,7 +52,7 @@ what it means in practice.*
 - **Typography:** *typefaces and where each is used*
 - **Imagery & iconography:** *style, do's and don'ts*
 - **Layout & space:** *density, grid, the role of whitespace*
-- **Motion:** *how things move; the methodlity of transitions*
+- **Motion:** *how things move; the personality of transitions*
 
 ## The feeling
 

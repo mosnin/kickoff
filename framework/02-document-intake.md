@@ -96,7 +96,7 @@ as given.
 Founding docs may contain confidential strategy, unreleased plans, or financials.
 Treat `docs/foundation/` as sensitive. Don't send its contents to external
 services without the user's say-so, and flag anything that shouldn't be committed
-to a shared repo (secrets, methodl data) so the user can decide.
+to a shared repo (secrets, personal data) so the user can decide.
 
 ---
 
