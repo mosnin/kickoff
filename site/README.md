@@ -17,22 +17,37 @@ site/
 
 ## Deploy to Vercel
 
-It's a static site — Vercel needs no configuration.
+It's a **static site** (no build step). `vercel.json` here declares exactly that —
+no framework, no install, no build, serve the folder as-is — so Vercel won't try
+to build it. The one thing that matters: **deploy the `site/` folder, not the repo
+root** (the repo root is the framework, with no `index.html`).
 
-**Option A — CLI**
+### Option A — CLI (simplest, recommended)
+Run from *inside* `site/`, so this folder *is* the project — no root-directory
+confusion:
 ```bash
 cd site
-npx vercel        # preview
-npx vercel --prod # production
+npx vercel          # first run: links/creates the project → preview URL
+npx vercel --prod   # promote to production
 ```
-When asked for a framework preset, choose **Other**. Root/output is this folder.
+On the first run accept the prompts (Framework = **Other** is auto-detected from
+`vercel.json`; build command stays empty). Done.
 
-**Option B — dashboard / git**
-Push the repo and import it on vercel.com. Set the **Root Directory** to `site/`,
-framework preset **Other**, build command empty, output directory `.`.
+### Option B — Git import (dashboard)
+1. Push the repo, then on **vercel.com → Add New → Project**, import it.
+2. **Set Root Directory to `site`.** ← this is the step people miss.
+3. Framework Preset: **Other** · Build Command: *(leave empty)* · Output
+   Directory: *(leave empty / `.`)* · Install Command: *(leave empty)*.
+4. Deploy. Every push to the repo redeploys.
 
-**Option C — drag & drop**
-Drag the `site/` folder onto vercel.com/new.
+### Option C — drag & drop
+Drag the **`site/`** folder onto **vercel.com/new** → instant deploy, no config.
+
+### Sanity check before deploy
+```bash
+cd site && python3 -m http.server 8000   # → http://localhost:8000 should render
+```
+If it renders locally, it will render on Vercel — there's no build to differ.
 
 ## Local preview
 
