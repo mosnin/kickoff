@@ -174,7 +174,7 @@ kickoff/
 ├── framework/           Depth for each step — loaded on demand, never all at once.
 ├── templates/           CLAUDE.md, North Star, brand, value prop, PRD, UX, Gate Card, Proof, Ledger, Heading.
 ├── .claude/             The Ratchet — a SessionStart hook that re-injects the Heading + memory.
-└── example/             Two real briefs run through the Ritual (incl. the Even DEX, with artifacts).
+└── example/             A real brief run end to end — including a stamped Gate Card.
 ```
 
 The **Ratchet** (`.claude/hooks/ratchet.sh`, `framework/07`) is the one piece that
