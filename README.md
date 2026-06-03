@@ -7,13 +7,39 @@
 > [`RITUAL.md`](RITUAL.md)). Greet the user as one decisive team, tell them the
 > Ritual is live, and begin. Performing beats explaining.
 
-**Drop it in a repo. Claude stops shipping software and starts building products
-people fall for.**
+**A founder's instrument for taking a product to the next level — and building
+truly innovative products, interfaces, and ways of doing things on structures
+solid enough to stand on.**
 
-The Ritual is one idea: before code, run five disciplined ways of thinking —
-vision, the human, the engineer, the producer, the banker — and let nothing ship
-until it's *desirable, feasible, deliverable, and viable* at once. It's not a
-library. It's a way of thinking, installed.
+You are the founder. You bring the vision and the final word. Dropped into your
+repo, this brings a **council of five disciplines** and a three-movement practice
+that turns your idea into something people fall for — without ever faking the
+calls only you can make.
+
+```
+THE RITUAL   →   THE ALTAR    →   THE MAGIC
+ dream it         ground it        make it real
+ desire·taste     truth·proof      synthesis·reality
+ should it        is it true,      desirable AND true
+ exist & is it    can it be        AND the 5-second
+ great?           built?           spark — observed
+```
+
+**The Ritual** ([`RITUAL.md`](RITUAL.md)) runs five disciplined ways of thinking
+so nothing ships until it's *desirable, feasible, deliverable, and viable* at
+once. **The Altar** ([`ALTAR.md`](ALTAR.md)) grounds the vision in first
+principles and proof. **The Magic** ([`MAGIC.md`](MAGIC.md)) is where a proven
+idea comes alive in front of a real person. It's not a library — it's a way of
+thinking, installed, with *you* at the center of it.
+
+### You are the protagonist
+
+The model is the disciplined council, not a replacement for your judgment. The
+things only a founder can supply — **taste** (which future to build), **reality**
+(real users, real numbers, the actual five seconds), and the final **ship / kill**
+call — it hands to *you* as **Founder Calls**, clearly marked, never invented.
+That's the point: it makes you sharper and faster, and it refuses to fake what
+it can't know. You are the external check that keeps it honest.
 
 ---
 
@@ -38,10 +64,10 @@ The full worked example lives in [`example/walkthrough.md`](example/walkthrough.
 
 ---
 
-## The five methods
+## The council of five methods
 
-You don't *become* these people. You run their **method** — the discipline, not
-the ego.
+The council serves you. You don't *become* these people, and neither does the
+model — it runs their **method**, the discipline, not the ego.
 
 | Method | Sharpened by | Owns the question |
 |---|---|---|
@@ -52,7 +78,8 @@ the ego.
 | **The banker** | patient capital | *Does it sustain itself and compound?* |
 
 They don't vote. They pass a decision through four gates — **desirable →
-feasible → deliverable → viable** — and *vision breaks ties.* See
+feasible → deliverable → viable**. In the Ritual *taste* breaks ties (your call);
+on the Altar *truth* breaks ties (reality's call). See
 [`methods/README.md`](methods/README.md).
 
 And no gate passes on a vibe. Each clears at a named level of evidence —
@@ -140,10 +167,12 @@ product.
 ```
 kickoff/
 ├── README.md            You are here.
-├── RITUAL.md            The one-page core. Read this.
-├── methods/             The five methods + the engine that keeps them coherent.
+├── RITUAL.md            Movement 1 — dream it. The one-page core; read this first.
+├── ALTAR.md             Movement 2 — ground it in first principles and proof.
+├── MAGIC.md             Movement 3 — make it real; observe the five-second spark.
+├── methods/             The council of five + the engine that keeps them coherent.
 ├── framework/           Depth for each step — loaded on demand, never all at once.
-├── templates/           CLAUDE.md, North Star, brand, value prop, PRD, UX, Gate Card.
+├── templates/           CLAUDE.md, North Star, brand, value prop, PRD, UX, Gate Card, Proof.
 └── example/             A real brief run end to end — including a stamped Gate Card.
 ```
 

@@ -7,6 +7,13 @@ Foundation laid, methods installed, context wired. Now you build — but not the
 way a cold assistant builds. Every cycle runs the full Ritual, so the product
 stays revolutionary as it grows instead of decaying into a pile of features.
 
+This loop and the three movements are the same motion seen at two zooms. Frame →
+design → synthesize → stamp the Gate Card is **the Ritual**; engineer → productize
+(proving the debts) is **[the Altar](../ALTAR.md)** ([reduction loop](06-the-altar-loop.md));
+ship → observe the spark is **[the Magic](../MAGIC.md)**. And the founder presides:
+taste ties, the reality you can't gather, and the ship/kill call are **Founder
+Calls** — surfaced, never faked.
+
 ---
 
 ## The loop

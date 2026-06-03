@@ -105,7 +105,7 @@ A debt with nowhere to go is the failure the Altar exists to end.
 - **Falsify gladly.** Hunt for the test that could kill the idea. Finding it early
   is the win.
 - **Honest rungs only.** Name the rung you actually reached. Evidence you can't
-  gather is *owed to reality* and handed to the human, never invented.
+  gather is *owed to reality* and handed to the founder, never invented.
 
 ---
 

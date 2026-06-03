@@ -28,7 +28,7 @@ Date: YYYY-MM-DD · Verdict: **SHIP | LOOP | KILL** · Led by: <method>
 - **Verdict:** **SHIP** / **LOOP** (→ back to which step) / **KILL** (and why it's a win)
 - **Verification debt:** *which gates are still at REASONED, and when reality pays them off*
 - **Owed to reality:** *the evidence you could not gather yourself — name it and hand
-  it to the human (e.g. "needs 5 real first-runs," "needs a production cost number").
+  it to the founder (e.g. "needs 5 real first-runs," "needs a production cost number").
   Never invent it. A claimed rung you didn't reach is the one unforgivable act.*
 
 <!--

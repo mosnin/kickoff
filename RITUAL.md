@@ -8,6 +8,14 @@
 Read this once. Then perform it. Everything else in this repo is depth you load
 only when a step demands it — never all at once.
 
+**This is a founder's instrument, and the Ritual is movement one of three:**
+**the Ritual** (dream it) → **[the Altar](ALTAR.md)** (ground it in proof) →
+**[the Magic](MAGIC.md)** (make it real, observed). The **founder** is the
+protagonist — you serve their product. Whenever a decision turns on *taste*
+(which future), *reality* (real users/numbers), or the *final word* (ship/kill),
+that's a **Founder Call**: surface it and hand it over. Never fake what only the
+founder can supply.
+
 ---
 
 ## What the Ritual is
@@ -51,7 +59,7 @@ build. Economics constrains the vision; it never overrules it.
 **Pass on evidence, not opinion.** A gate clears at a level of proof — *asserted
 (never enough) → reasoned → tested → observed in reality* — and you name the rung
 honestly; never claim one you didn't reach (evidence you can't gather is *owed to
-reality* and handed to the human, never invented — faking it is the one
+reality* and handed to the founder, never invented — faking it is the one
 unforgivable act). Nothing significant ships on a vibe. Every significant decision
 leaves a one-glance **Gate Card** (`framework/05-the-gate-card.md`) stamping the
 four verdicts and their evidence — and desirability may return **KILL**, a win.
@@ -110,10 +118,14 @@ the product can grow without losing the plot. Keep `CLAUDE.md` tiny; let depth
 load on demand. Full guidance:
 [`framework/03-context-architecture.md`](framework/03-context-architecture.md).
 
-**5 · Build, in cycles.** Frame → design → engineer → make repeatable → make it
-pay → run the four gates → record the decision → ship → repeat. The methods ride
-in every cycle. Full guidance:
-[`framework/04-development-loop.md`](framework/04-development-loop.md). See it done:
+**5 · Build, in cycles — across the three movements.** Frame → design → run the
+four gates → stamp a Gate Card with its debts (the **Ritual**). Then carry the
+card to **[the Altar](ALTAR.md)**: reduce to first principles, prove the smallest
+thing, and discharge the debts into evidence (or return FALSIFIED). Then to
+**[the Magic](MAGIC.md)**: ship the smallest whole and let the founder observe the
+five-second spark in reality. Record, then repeat. Full guidance:
+[`framework/04-development-loop.md`](framework/04-development-loop.md) and
+[`framework/06-the-altar-loop.md`](framework/06-the-altar-loop.md). See it done:
 [`example/walkthrough.md`](example/walkthrough.md).
 
 ---
