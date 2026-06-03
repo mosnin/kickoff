@@ -79,12 +79,17 @@ to do.
 
 ### Option 2 — add it to an existing repo
 
-Clone the Ritual into a repo you already have, then run the installer once:
+Clone the Ritual in as plain, tracked files, then run the installer once:
 
 ```bash
-git clone https://github.com/mosnin/kickoff .ritual    # or: git submodule add …
+git clone --depth 1 https://github.com/mosnin/kickoff .ritual && rm -rf .ritual/.git
 bash .ritual/install.sh
 ```
+
+The `rm -rf .ritual/.git` matters: it turns the clone into ordinary files your
+repo can commit. Skip it and you get a *repo inside your repo* — git refuses to
+track its contents, and your teammates end up with an empty `.ritual/`. (The
+installer warns you if you forget.)
 
 `install.sh` adds one line — `@.ritual/RITUAL.md` — to your repo's own
 `CLAUDE.md` (creating it if you don't have one). It's idempotent and never
@@ -92,7 +97,10 @@ touches your existing content. That's the whole job: Claude auto-reads
 `CLAUDE.md`, so once the import is there, the Ritual performs itself.
 
 Prefer to wire it by hand? Just add that one line to your `CLAUDE.md` yourself —
-the installer does nothing more.
+the installer does nothing more. Want automatic updates instead of a frozen
+copy? Use a submodule (`git submodule add … .ritual`) — but then teammates must
+clone with `--recurse-submodules`, or run `git submodule update --init`, or
+`.ritual/` arrives empty.
 
 When the Ritual runs in an existing repo, it **weaves into** your current
 `CLAUDE.md` (keeping everything that's there) rather than replacing it.

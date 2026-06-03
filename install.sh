@@ -37,6 +37,16 @@ case "$RITUAL_DIR" in
     ;;
 esac
 
+# Foot-gun guard: a nested .git turns the Ritual into a repo-inside-your-repo,
+# which git won't track and which lands empty for your teammates. Warn, don't
+# fail — the wiring below still works locally.
+if [ -e "${RITUAL_DIR}/.git" ]; then
+  echo "⚠  Heads up: ${REL}/.git exists, so ${REL}/ is a nested git repo."
+  echo "   Your repo can't track its files and teammates will get it empty."
+  echo "   Fix it with:  rm -rf \"${REL}/.git\""
+  echo
+fi
+
 IMPORT="@${REL}/RITUAL.md"
 CLAUDE="${HOST_DIR}/CLAUDE.md"
 
