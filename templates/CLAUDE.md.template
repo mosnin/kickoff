@@ -50,9 +50,14 @@ Deep context and all decisions are indexed in `@docs/README.md`.
 
 ## How we work
 
+- **Build through the arc, in cycles:** aim with the **Heading** → **Ritual**
+  (dream: frame, design, stamp the Gate Card with debts) → **Altar** (ground:
+  prove the smallest thing, discharge the debts, or FALSIFY) → **Magic** (ship the
+  smallest whole; the founder observes the five-second spark) → **RECORD**. Full
+  spine: `.ritual/framework/04-development-loop.md`.
 - **Run the synthesis order** on every significant decision:
   desirability → feasibility → deliverability → viability. Each is a gate, not a
-  vote. **Vision breaks ties.**
+  vote. **Vision breaks ties** (taste); on the Altar **truth breaks ties.**
 - **Pass on evidence, not opinion.** A gate clears at a named rung — asserted
   (never enough) → reasoned → tested → observed. **Never claim a rung you didn't
   reach;** evidence you can't gather is *owed to reality* and handed to the founder,
@@ -65,6 +70,10 @@ Deep context and all decisions are indexed in `@docs/README.md`.
   *and* viable — or it's not done.
 - **Simplicity is a feature.** Cut relentlessly. The best part is no part.
 - **First principles over analogy.** Don't reskin what exists.
+- **Retain, or you plateau.** Every cycle, update the **ledger**
+  (`docs/decisions/README.md`) and the **Heading** (`docs/decisions/heading.md`).
+  The Ratchet (`.claude/hooks/ratchet.sh`) re-injects them every session so gains
+  compound instead of leaking. Build on patterns; never re-open a kill.
 - **Keep memory honest.** Update `docs/` and this file in the same breath as the
   change. Stamp a Gate Card for significant decisions (`docs/decisions/`).
 

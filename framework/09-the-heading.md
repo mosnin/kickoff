@@ -64,8 +64,9 @@ It is *volatile* — it changes most cycles. (The ledger, by contrast, is the
 
 ## How it plugs into the loop
 
-- **Pick:** at the start of a work cycle (Framework 04, FRAME), the next task is
-  the top of the Heading — not whatever's freshest in mind.
+- **Pick:** at the start of a work cycle (`framework/04-development-loop.md`, the
+  AIM step), the next task is the top of the Heading — not whatever's freshest in
+  mind.
 - **Surface first:** the Ratchet hook re-injects the Heading **before** anything
   else, so every session opens already pointed at the one thing that matters.
   Re-deriving the plan each session is vector drift; this removes it.
