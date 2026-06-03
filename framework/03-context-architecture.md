@@ -85,10 +85,15 @@ Cards are append-only history. Don't rewrite them; supersede them with a new one
 and link back. This is how a session in month twelve understands month two without
 re-litigating it.
 
-**The cards compound.** Keep a rollup at `docs/decisions/README.md`: patterns that
+**The cards compound — through the ledger.** Keep a rollup at
+`docs/decisions/README.md` (from `templates/decision-ledger.md`): patterns that
 keep clearing the gates (promote to defaults), debts still owed (gates left at
 REASONED), and kills and why (the entries that stop you re-litigating bad ideas a
-year later). A Ritual whose cards compound gets sharper with every decision.
+year later). This ledger *is the ratchet's memory*: the SessionStart hook
+(`framework/07-the-ratchet.md`) re-injects it every session so gains don't leak as
+context fills. Keep it ruthlessly short — it's read in full, every session. A
+Ritual whose ledger compounds gets sharper with every decision; one whose ledger
+rots compounds the wrong thing.
 
 ---
 

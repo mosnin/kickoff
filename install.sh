@@ -61,6 +61,42 @@ else
   echo "Wired the Ritual into your existing CLAUDE.md ($IMPORT)."
 fi
 
+# ---------------------------------------------------------------------------
+# The Ratchet: register the SessionStart hook that re-injects retained memory
+# (docs/decisions ledger + North Star) every session, so gains don't leak as
+# context fills. See framework/07-the-ratchet.md. Never clobbers existing hooks.
+# ---------------------------------------------------------------------------
+HOOK="${RITUAL_DIR}/.claude/hooks/ratchet.sh"
+[ -f "$HOOK" ] && chmod +x "$HOOK" 2>/dev/null || true
+HOOK_CMD="\$CLAUDE_PROJECT_DIR/${REL}/.claude/hooks/ratchet.sh"
+HOST_SETTINGS="${HOST_DIR}/.claude/settings.json"
+
+if [ ! -f "$HOOK" ]; then
+  : # nothing to wire
+elif [ -f "$HOST_SETTINGS" ] && grep -q 'ratchet.sh' "$HOST_SETTINGS"; then
+  echo "Ratchet hook already registered. Nothing to do."
+elif [ ! -f "$HOST_SETTINGS" ]; then
+  mkdir -p "${HOST_DIR}/.claude"
+  cat > "$HOST_SETTINGS" <<JSON
+{
+  "hooks": {
+    "SessionStart": [
+      { "hooks": [ { "type": "command", "command": "${HOOK_CMD}" } ] }
+    ]
+  }
+}
+JSON
+  echo "Registered the Ratchet (SessionStart hook) in .claude/settings.json."
+else
+  echo
+  echo "⚠  You already have .claude/settings.json — not touching it. To turn on"
+  echo "   the Ratchet (re-injects retained memory each session), add this hook:"
+  echo
+  echo "   \"SessionStart\": [ { \"hooks\": [ { \"type\": \"command\","
+  echo "     \"command\": \"${HOOK_CMD}\" } ] } ]"
+  echo
+fi
+
 cat <<'DONE'
 
 Done. Open Claude in this repo. It reads CLAUDE.md, sees the Ritual, and
