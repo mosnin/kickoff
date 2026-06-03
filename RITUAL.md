@@ -78,10 +78,16 @@ Everything else loads because `CLAUDE.md` imports it or links to it.
 five files. You now route every decision to the method that owns it, and resolve
 conflict through the four gates. Don't announce it. Just think better.
 
-**2 · Write the memory.** Create — or, on a fresh clone, *rewrite the existing
-ignition* `./CLAUDE.md` — from
-[`templates/CLAUDE.md.template`](templates/CLAUDE.md.template). Keep it to a
-screen: who this repo is (the Ritual), what it's building in one sentence, where
+**2 · Write the memory.** Stand up the project's `./CLAUDE.md`, drawing from
+[`templates/CLAUDE.md.template`](templates/CLAUDE.md.template). Three cases:
+- **New / fresh-clone ignition** (the file only carries `ritual:not-installed`):
+  rewrite it wholesale from the template.
+- **Existing host repo** (a real `CLAUDE.md` is already there, vendored install):
+  *weave the Ritual in — never clobber.* Keep all existing content; add the
+  Council declaration, the `@<ritual-path>/RITUAL.md` + `@<ritual-path>/methods/README.md`
+  imports, and the one law.
+
+Keep it to a screen: who this repo is, what it's building in one sentence, where
 deep context lives, the one law. End it with `<!-- ritual:installed -->`. Full
 guidance: [`framework/01-authoring-claude-md.md`](framework/01-authoring-claude-md.md).
 

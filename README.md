@@ -79,21 +79,23 @@ to do.
 
 ### Option 2 — add it to an existing repo
 
-Vendor the Ritual into a repo you already have:
+Clone the Ritual into a repo you already have, then run the installer once:
 
 ```bash
-# As a submodule (you get updates)
-git submodule add https://github.com/mosnin/kickoff .ritual
-# …or a frozen copy
-git clone --depth 1 https://github.com/mosnin/kickoff .ritual && rm -rf .ritual/.git
+git clone https://github.com/mosnin/kickoff .ritual    # or: git submodule add …
+bash .ritual/install.sh
 ```
 
-Then point your repo's own `CLAUDE.md` at the Ritual with one line (create the
-file if you don't have one — this line is enough; the Ritual writes the rest):
+`install.sh` adds one line — `@.ritual/RITUAL.md` — to your repo's own
+`CLAUDE.md` (creating it if you don't have one). It's idempotent and never
+touches your existing content. That's the whole job: Claude auto-reads
+`CLAUDE.md`, so once the import is there, the Ritual performs itself.
 
-```markdown
-@.ritual/RITUAL.md
-```
+Prefer to wire it by hand? Just add that one line to your `CLAUDE.md` yourself —
+the installer does nothing more.
+
+When the Ritual runs in an existing repo, it **weaves into** your current
+`CLAUDE.md` (keeping everything that's there) rather than replacing it.
 
 Open Claude. It performs the Ritual on your repo.
 
