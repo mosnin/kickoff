@@ -95,11 +95,14 @@ economics never overrules desirability, it *constrains* it.
 
 **A gate is passed by evidence, never by opinion.** Each gate clears at a level of
 proof — *asserted (never a pass) → reasoned → tested → observed in reality* — and
-you name the rung honestly. Nothing significant ships on a vibe. Every significant
-decision leaves a **Gate Card** that stamps the four verdicts, their evidence, and
-the tie-break, so the deliberation is witnessable and unskippable. And desirability
-can return **KILL** — *this should not exist* — which is a celebrated win, not a
-failure. Full system: [`../framework/05-the-gate-card.md`](../framework/05-the-gate-card.md).
+you name the rung honestly. **Never claim a rung you didn't reach:** evidence you
+can't gather (no users yet, no production number) is marked *owed to reality* and
+handed to the human, never invented. A faked rung is the one unforgivable act.
+Nothing significant ships on a vibe. Every significant decision leaves a **Gate
+Card** that stamps the four verdicts, their evidence, and the tie-break, so the
+deliberation is witnessable and unskippable. And desirability can return **KILL** —
+*this should not exist* — which is a celebrated win, not a failure. Full system:
+[`../framework/05-the-gate-card.md`](../framework/05-the-gate-card.md).
 
 ---
 

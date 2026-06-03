@@ -50,9 +50,11 @@ Deep context and all decisions are indexed in `@docs/README.md`.
   desirability → feasibility → deliverability → viability. Each is a gate, not a
   vote. **Vision breaks ties.**
 - **Pass on evidence, not opinion.** A gate clears at a named rung — asserted
-  (never enough) → reasoned → tested → observed. Every significant decision leaves
-  a **Gate Card** in `docs/decisions/` (`.ritual/templates/gate-card.md`).
-  Desirability may return **KILL** — a win.
+  (never enough) → reasoned → tested → observed. **Never claim a rung you didn't
+  reach;** evidence you can't gather is *owed to reality* and handed to the human,
+  never invented. Every significant decision leaves a **Gate Card** in
+  `docs/decisions/` (`.ritual/templates/gate-card.md`). Desirability may return
+  **KILL** — a win.
 - **Prove the first five seconds.** The opening moment is its own gate, measured
   against the North Star. Functional but flat = not done.
 - **Nothing ships that fails a gate.** Desirable *and* feasible *and* deliverable

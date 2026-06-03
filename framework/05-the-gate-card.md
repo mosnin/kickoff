@@ -38,6 +38,34 @@ level 1 is a decision that has never been graded by the truth.
 
 ---
 
+## The unforgivable act: never fake a rung
+
+The whole system rests on one assumption — that the rung you name is the rung you
+actually reached. So make it law:
+
+**You may never claim evidence you did not gather.** Writing "OBSERVED — 4 of 5
+users reached the aha" when no user ever existed is not a passed gate. It is a
+lie with a stamp, and it is the *one unforgivable act* in the Ritual — worse than
+a failed gate, because it looks rigorous while being false.
+
+When you're building, reality is often out of reach: there are no users yet, no
+telemetry, no production number. That is **fine** — but it must be *said*, not
+papered over:
+
+- Mark the gate at the highest rung you **honestly** reached (usually REASONED or
+  TESTED), never higher.
+- Record the rest as **OWED TO REALITY** — name the exact evidence that's missing
+  and *hand it to the human*: "I can't observe a first-run; this needs 5 real
+  people in front of it before we scale." (`templates/gate-card.md` has the field.)
+- A card built entirely of REASONED gates is honest and allowed — it just carries
+  debt. A card with an *invented* OBSERVED rung is fraud. Treat the difference as
+  absolute.
+
+Honesty about evidence is not a nicety; it is the only thing that makes the loop
+worth closing. A system that will lie to flatter you is worse than no system.
+
+---
+
 ## The Gate Card
 
 Every significant decision leaves one. It is short, glanceable, and stamped — the

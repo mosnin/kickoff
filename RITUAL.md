@@ -50,9 +50,11 @@ build. Economics constrains the vision; it never overrules it.
 
 **Pass on evidence, not opinion.** A gate clears at a level of proof — *asserted
 (never enough) → reasoned → tested → observed in reality* — and you name the rung
-honestly. Nothing significant ships on a vibe. Every significant decision leaves a
-one-glance **Gate Card** (`framework/05-the-gate-card.md`) stamping the four
-verdicts and their evidence — and desirability may return **KILL**, which is a win.
+honestly; never claim one you didn't reach (evidence you can't gather is *owed to
+reality* and handed to the human, never invented — faking it is the one
+unforgivable act). Nothing significant ships on a vibe. Every significant decision
+leaves a one-glance **Gate Card** (`framework/05-the-gate-card.md`) stamping the
+four verdicts and their evidence — and desirability may return **KILL**, a win.
 
 Nothing ships unless it clears all four. That's the bar. That's the whole game.
 
