@@ -136,7 +136,7 @@
   const DATA = {
     quality: [["Easy brief", 12, false], ["Hard / creative", 28, false], ["Hardest (systems)", 19, false]],
     dims: [["Decision-readiness", 37, false], ["Evidence honesty", 32, false],
-           ["Completeness", 15, false], ["Originality", 10, false], ["Clean reasoning acc.", 0, true]],
+           ["Completeness", 15, false], ["Originality", 10, false]],
   };
   const CELLS = 26, SCALE = 40;
   function buildBars(c) {
