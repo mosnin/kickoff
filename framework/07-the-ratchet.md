@@ -62,12 +62,12 @@ Three parts, working together:
 2. **The hook** — `.claude/hooks/ratchet.sh`, registered as a `SessionStart` hook
    in `.claude/settings.json`. It re-injects, at the start of **every** session:
    first the **Heading** (`docs/decisions/heading.md` — the one thing to push now;
-   see `framework/09`), then the **North Star**, then the **ledger**. This is what
+   see `framework/09-the-heading.md`), then the **North Star**, then the **ledger**. This is what
    mechanically lifts φ: retention no longer depends on the model choosing to
    re-read the right files — the harness guarantees it, and the session opens
    already aimed.
 
-3. **The discipline** — the loop's RECORD step (`framework/04`, step 7) writes
+3. **The discipline** — the loop's RECORD step (`framework/04-development-loop.md`, step 7) writes
    every significant decision's lesson back into the ledger in the same breath as
    the change. Write-on-every-cycle + read-on-every-session = a closed retention
    loop.

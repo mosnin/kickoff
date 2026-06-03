@@ -1,140 +1,114 @@
 # The Ritual, performed — a worked example
 
-> Don't trust the Ritual because the README says it works. Watch it work. This is
-> one real brief, run end to end, with the seams left showing so you can see the
-> methods *change the decision* — not just the tone.
+> Don't trust the framework because the README says it works. Watch it work — the
+> whole arc, **Ritual → Altar → Magic**, with the seams showing so you can see the
+> methods *change the decision*, the evidence get *grounded*, and the gains get
+> *retained*.
 
 **The brief:** *"Add a way for users to share their work."*
 
-A blank-slate assistant ships this in an afternoon. Here's that version, then the
-version the Ritual produces — and the gap between them is the entire pitch.
+---
+
+## Without the framework
+
+> Add a **Share** button. Generate a public URL. Copy it. Toast: "Link copied."
+> Ship.
+
+It works. It's also forgettable, slightly scary, and does nothing for the
+business. A *feature.* Now the framework turns the same brief into a *product.*
 
 ---
 
-## Without the Ritual
+## ① THE RITUAL — dream it
 
-> Add a **Share** button to the toolbar. On click, generate a public URL and copy
-> it to the clipboard. Show a toast: "Link copied." Ship it.
+**Frame *(vision + the human)*.** Vision rejects the cliché ("Share" is not a
+button) and reframes: *the moment someone is proud enough to put their name on
+their work in front of someone else.* The human names the real goal: *let someone
+see my work without me feeling exposed.*
 
-It works. It demos fine. It is also forgettable, slightly scary to use, and does
-nothing for the business. It's a *feature*. Now watch the Ritual turn the same
-brief into a *product decision.*
+**Design — diverge, then cut.** Kill the first idea (a raw public link). Put up
+real options (public link / named-people / expiring / workspace) and cut to **one
+primitive: share with a person, at a permission level.** The smallest *whole*
+thing: a sheet that says *"Maya can view this"* and means it. Sweat the five
+seconds: the recipient opens *to the work*, with the sharer's name.
 
----
+**Run the gates → stamp a Gate Card.** Each gate names its evidence rung
+(asserted → reasoned → tested → observed); nothing passes on a vibe:
 
-## With the Ritual
-
-### 1 · Frame — is this worth doing? *(vision + the human)*
-
-**Vision** reframes the brief: *"Share" is not a button. It's the moment a person
-is proud enough of what they made to put their name on it in front of someone
-else.* That moment is rare and valuable — design *that*, not a URL generator.
-
-**The human** asks who's really sharing and to whom: a user sending work to a
-teammate or a friend, often unsure who'll be able to see it or change it. The real
-goal isn't "produce a link" — it's *"let someone else see my work without me
-feeling exposed."*
-
-→ **Reframed problem:** *Make people feel proud and safe handing their work to
-someone else.* Already a different product than "Share button."
-
-### 2 · Design — the smallest revolutionary slice *(the human + vision)*
-
-**The human** walks the task and maps the friction:
-
-| Step | Friction | Fix |
-|---|---|---|
-| Click share | "Who will be able to see this?" — anxiety | State access in plain words *before* the link exists |
-| Get a raw public URL | Fear: anyone with it has it forever | Default to *people you name*, not *anyone with the link* |
-| Send it | "Did it work? Can they edit?" | Show recipient + permission, with one-click change |
-| Recipient opens | Cold, contextless | Open to the work with the sharer's name and intent |
-
-**Vision** cuts: one primitive — *share with a person, at a permission level* — not
-five (link, embed, export, invite, publish). The smallest *whole, great* thing: a
-share sheet that says, in a sentence, *"Maya can view this"* and means it.
-
-### 3 · Engineer — at the limit *(the engineer)*
-
-First-principles teardown: the visible artifact is a link, but the *real
-constraint* is **access control** — who can do what, enforced server-side, every
-request. Get that right and the link, the embed, the export are all trivial views
-on the same primitive. Get it wrong and every sharing feature is a new security
-hole.
-
-→ Delete the "public link" special case. Build *one* authorization primitive
-(subject → resource → capability). The share UI is a thin skin over it. Fewer
-parts, one place for security to be correct.
-
-### 4 · Productize — make it repeatable *(the producer)*
-
-One sharing primitive, reused everywhere, beats five bespoke flows. Define the
-standard: every shareable object goes through the same access-control path, the
-same share sheet, the same audit log. New shareable thing later? It inherits
-sharing for free — no new code, no new way to get security wrong. Quality built
-into the line, not re-inspected per feature.
-
-### 5 · Monetize — make it pay *(the banker)*
-
-Here's the move a feature-shipper never sees: **every shared piece of work is a
-free, warm invitation to a non-user.** The recipient opens the product to
-something a person they know made and was proud of — the best possible first
-impression. Sharing *is* the growth loop. So:
-
-- Make the shared view beautiful and the "make your own" path one tap — the
-  acquisition surface, not an afterthought.
-- Capture value patiently: sharing stays free (it's the engine); depth for the
-  *sharer* (private spaces, advanced permissions, team controls) is where revenue
-  lives. Never tax the invitation — that's burning the flywheel for a one-time
-  coin. *(The human method confirms: no dark patterns, no forced friction.)*
-
-### 6 · Run the gates — and stamp the verdict
-
-No gate passes on a vibe. Each names its evidence and how *real* that evidence is
-(asserted → reasoned → tested → observed). The deliberation becomes a **Gate
-Card** — the artifact that proves the Ritual ran:
-
-> **Gate Card 0003 — Sharing is an access-control primitive, not a link feature**
-> Date: 2026-06-03 · Verdict: **SHIP** · Led by: vision
+> **Gate Card 0001 — Sharing is an access-control primitive, not a link feature**
+> Date: 2026-06-03 · Verdict: **SHIP → to the Altar** · Led by: vision
 >
 > | Gate | Verdict | Rung | Evidence |
 > |---|---|---|---|
-> | **Desirable** | PASS | OBSERVED | First-run watched with 5 beta users: 4 reached "this is mine, and it's safe" unaided |
-> | ↳ 5-second gate | PASS | TESTED | Share-sheet storyboard shown to 3 people — all read "Maya can view this" correctly at a glance |
-> | **Feasible** | PASS | TESTED | Spike of the single authorization primitive (subject→resource→capability) runs; link/embed/export are thin views over it |
-> | **Deliverable** | PASS | REASONED | One sharing path designed for every object — *not yet reproduced twice* ⚠ |
-> | **Viable** | PASS | TESTED | Beta logs: each shared link brings ~0.3 new users; sharing free, sharer-depth paid |
+> | **Desirable** | PASS | REASONED | "proud + safe handoff" is a sharp non-cliché wedge — *not yet shown to a real user* |
+> | ↳ 5-second gate | PASS | REASONED | share-sheet storyboarded; not yet watched in a real first-run |
+> | **Feasible** | PASS | REASONED | one auth primitive (subject→resource→capability) should make link/embed/export thin views — *unproven* |
+> | **Deliverable** | PASS | REASONED | one path for every object, in principle — not reproduced |
+> | **Viable** | PASS | REASONED | each share is a warm invite → growth loop; sharing free, depth paid |
 >
-> **Tension:** producer wanted five flows (link/embed/export/invite/publish);
-> vision cut to one primitive. **Tie-break:** converged — the simple thing was
-> also the manufacturable thing.
-> **Verdict:** SHIP. **Debt:** Deliverable is only REASONED — prove the path
-> reproduces (build it for a *second* object type) before scaling.
+> **Tension:** producer wanted five flows; vision cut to one. **Tie-break:** converged.
+> **Verdict:** SHIP. Every gate is REASONED → **heavy debt owed to reality.**
+> **🛎️ Founder Call:** taste confirmed against the North Star? (proud+safe = yes)
 
-Notice the card is honest: three gates reached real evidence; one is still
-*reasoned*, so it's flagged as debt to pay before scale — not hand-waved into a ✅.
-That honesty is the difference between a verdict and a vibe.
+Honest: on a cold build *nothing is OBSERVED yet* — and the card says so rather
+than faking a rung. The debts are now the backlog.
 
-This card shows a *mature* slice — the beta users and logs are real because the
-evidence was actually gathered. On a first build there'd be none of that yet: the
-honest move is to mark Desirable and Viable as **REASONED — owed to reality** and
-hand the missing evidence back to the founder ("needs 5 real first-runs"), never to
-invent an OBSERVED rung. A claimed rung you didn't reach is the one unforgivable
-act; honest debt is fine.
+## ② THE ALTAR — ground it
+
+The Heading says work the **binding constraint**: *does one auth primitive really
+collapse link/embed/export into thin views?* (the cheapest claim that could
+falsify the whole design). The Altar builds the **smallest proof** — not the
+product:
+
+> **Proof 0001 — one primitive covers every share surface**
+> Built a spike: the authorization primitive + link, embed, and export
+> implemented as views over it, for **two** object types. Both reproduced
+> identically. **Feasible REASONED → TESTED. Deliverable REASONED → TESTED.**
+> *Owed to reality:* prod-scale audit + pen-test before OBSERVED.
+
+If the spike had shown the surfaces needed bespoke logic → **FALSIFIED**, back to
+the Ritual. It didn't; the card climbs. *Truth broke ties here, not taste.*
+
+## ③ THE MAGIC — make it real
+
+Ship the smallest whole share experience; the **founder** puts it in front of 5
+real people and watches the first five seconds.
+
+> **Verdict: 🛎️ owed to reality (Founder Call).** Desirable + the 5-second spark
+> can only be **OBSERVED** by the founder with real users — the model will not
+> invent it. *If* 4/5 reach "this is mine, and it's safe" unaided → **MAGIC**. If
+> it works but no one's moved → **FLAT** (back to ① for taste). If they love it
+> but it can't scale → **MIRAGE** (back to ② for truth).
+
+## The Heading + the Ratchet — retain and re-aim
+
+RECORD writes the cycle into the ledger and re-points the Heading:
+
+```
+docs/decisions/heading.md  →  next: founder runs the 5-real-user first-run test
+docs/decisions/README.md   →  pattern: "make the invitation the growth loop"
+                              kill:    "five bespoke sharing flows"
+                              debt:    desirable/5-sec OBSERVED (owed to founder)
+```
+
+Next session, the **Ratchet hook re-injects all of this first** — so the gains
+never leak and the work never gets re-litigated. That's φ→1: the difference
+between a plateau and compounding.
 
 ---
 
 ## The gap
 
-| | Without the Ritual | With the Ritual |
+| | Without | With the framework |
 |---|---|---|
-| **What shipped** | A "Share" button + public link | A proud, safe sharing *experience* |
-| **Security** | A new public-link code path | One audited access-control primitive |
-| **Future features** | Each sharing case re-built | Inherit sharing for free |
-| **Business** | Neutral | The product's growth loop |
-| **In one word** | Feature | Product |
+| **What ships** | a Share button + public link | a proud, safe sharing *experience* |
+| **Security** | a new public-link code path | one audited auth primitive (proven on 2 types) |
+| **Future features** | each sharing case re-built | inherit sharing for free |
+| **Business** | neutral | the product's growth loop |
+| **Evidence** | "looks done" | rungs named; debts owed to reality, not faked |
+| **Next time** | starts cold | the Ratchet re-injects what was learned |
+| **In a word** | feature | product |
 
-Same brief. Same afternoon, roughly. **Wildly different product** — because five
-disciplines each changed the decision, and the gates fused them into one.
-
-That's the Ritual. Not a costume. A way of reaching the better answer, every
-time.
+Same brief. Five disciplines each changed the decision; the Altar grounded it; the
+founder owns the spark; the Ratchet keeps it. **That's the framework — not a
+costume, a way of reaching the better answer and never giving it back.**

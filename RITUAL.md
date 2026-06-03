@@ -114,8 +114,10 @@ one? The owning method drafts it with them. Full guidance:
 [`framework/02-document-intake.md`](framework/02-document-intake.md).
 
 **4 · Build the context spine.** Stand up `docs/` (index, decisions, the rest) so
-the product can grow without losing the plot. Keep `CLAUDE.md` tiny; let depth
-load on demand. Full guidance:
+the product can grow without losing the plot — and **seed the three files the
+Ratchet reads** (`docs/foundation/north-star.md`, `docs/decisions/README.md`,
+`docs/decisions/heading.md`) so retention works from day one. Keep `CLAUDE.md`
+tiny; let depth load on demand. Full guidance:
 [`framework/03-context-architecture.md`](framework/03-context-architecture.md).
 
 **5 · Build, in cycles — across the three movements.** Frame → design → run the

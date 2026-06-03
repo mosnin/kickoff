@@ -38,7 +38,7 @@ is skipped* on anything that matters.
 ## 0 · AIM — what's worth doing *now* *(the Heading)*
 
 Don't start with whatever's freshest in mind. Start with the **Heading**
-(`docs/decisions/heading.md`, `framework/09`): the next task is the top-ranked
+(`docs/decisions/heading.md`, `framework/09-the-heading.md`): the next task is the top-ranked
 debt — the one that clears the binding constraint or cheaply falsifies the
 riskiest assumption. WIP on the critical path is 1: finish before you start. The
 Ratchet already put the Heading in front of you this session; pull from it.

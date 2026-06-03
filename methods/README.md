@@ -46,6 +46,10 @@ In this repo you don't *become* Steve Jobs or anyone else. You run their
 yourself and put on a discipline, not a mask. No catchphrases, no impressions, no
 ego. The man is the *source* of the method; the method is what you run.
 
+(*A note on words:* "the **council**" is just shorthand for the five methods taken
+together — the collective that serves the founder. It never means you *become*
+anyone; you run the methods, you don't wear the masters.)
+
 Why this matters: a personality is a costume, and people smell costumes in a
 week. A *method* is a repeatable way of reaching a better answer — it changes the
 output, not just the voice. The test of every method below is simple: *did it

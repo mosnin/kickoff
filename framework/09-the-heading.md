@@ -45,7 +45,7 @@ the `owed-to-reality` items, the failed gates). Rank them:
 | Working non-bottleneck tasks | **Constraint-first** — always work the one binding constraint, subordinate the rest | Theory of Constraints |
 | Building before testing the riskiest assumption | **Cheapest-falsifier-first** — run the experiment that could kill it *before* you build on it | Expected Value of Information |
 | WIP thrash (context-switching is variance, and variance is geometric-growth drag) | **WIP = 1 on the critical path** — finish before you start | single-piece flow (the producer) |
-| Re-deriving the plan every session | **Retain it** — the Heading is carried by the Ratchet, not re-decided | the ratchet (`framework/07`) |
+| Re-deriving the plan every session | **Retain it** — the Heading is carried by the Ratchet, not re-decided | the ratchet (`framework/07-the-ratchet.md`) |
 
 ## The artifact: the Heading
 

@@ -41,17 +41,30 @@ making Tier 2 so well-indexed that the right detail is always one hop away.
 docs/
 ├── README.md            THE INDEX — the map of all knowledge. Always current.
 ├── foundation/          Founding docs (Step 3). The immutable inputs.
+│   ├── north-star.md     The taste calibration (the Ratchet reads this).
 │   ├── brand-kit.md
 │   ├── value-proposition.md
 │   ├── prd.md
 │   └── user-experience.md
 ├── decisions/           Gate Cards — one stamped verdict per significant decision.
-│   ├── README.md         Rollup: patterns that keep passing, debts owed, kills.
+│   ├── README.md         The ledger: patterns that pass, debts owed, kills. (Ratchet reads this.)
+│   ├── heading.md        The current aim — what to work on next. (Ratchet reads this FIRST.)
 │   └── 0001-example.md
 ├── product/             Specs, flows, requirements as they evolve.
 ├── engineering/         Architecture, systems, interfaces, trade-offs.
 └── operations/          Production, economics, go-to-market, metrics.
 ```
+
+**Stand up the spine (do this once, at setup):** create the tree above, and
+**seed the three files the Ratchet reads** so retention works from day one — even
+empty, they must exist or the hook has nothing to re-inject:
+
+- `docs/foundation/north-star.md` ← `templates/north-star.md` (filled during intake, Step 3)
+- `docs/decisions/README.md` ← `templates/decision-ledger.md` (the ledger, starts near-empty)
+- `docs/decisions/heading.md` ← `templates/heading.md` (the first aim: usually "run the riskiest cheapest experiment")
+
+Without these, the Ratchet greets every session with "no ledger yet" and φ stays
+low. Seeding them is what arms the ratchet.
 
 Each subtree maps to methods: `foundation/` & `product/` → Jobs + Norman;
 `engineering/` → Musk + Ford; `operations/` → Ford + the banker. The owning method
@@ -138,3 +151,6 @@ product grows.
   and summarized in `CLAUDE.md`).
 - At least the foundation docs are indexed, and the Gate Card flow is in place
   (`docs/decisions/` with a rollup `README.md`).
+- **The three Ratchet inputs exist and are seeded** — `docs/foundation/north-star.md`,
+  `docs/decisions/README.md`, `docs/decisions/heading.md` — so a fresh session is
+  re-injected with real memory, not "no ledger yet."

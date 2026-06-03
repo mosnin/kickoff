@@ -177,7 +177,7 @@ kickoff/
 └── example/             A real brief run end to end — including a stamped Gate Card.
 ```
 
-The **Ratchet** (`.claude/hooks/ratchet.sh`, `framework/07`) is the one piece that
+The **Ratchet** (`.claude/hooks/ratchet.sh`, `framework/07-the-ratchet.md`) is the one piece that
 reaches into the harness: it re-injects your decision ledger every session so gains
 *compound* instead of leaking. Mathematically it's the difference between a plateau
 and exponential growth — the highest-leverage part of the system.
