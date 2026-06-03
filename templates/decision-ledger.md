@@ -11,6 +11,12 @@ The rule: **build on the patterns, pay the open debts, never re-open a kill or a
 falsified claim.** Re-litigating settled decisions is exactly the leak that turns
 exponential growth into a plateau.
 
+> The *current aim* — what to work on next — lives in a separate, more volatile
+> file, `docs/decisions/heading.md` (`templates/heading.md`,
+> `framework/09-the-heading.md`). This ledger is the *accumulated* memory; the
+> Heading is *where the vector points right now*. The Ratchet surfaces the Heading
+> first, then this ledger.
+
 ---
 
 ## Patterns that keep passing (promote to defaults)

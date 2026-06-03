@@ -14,6 +14,7 @@
 set -uo pipefail
 
 ROOT="${CLAUDE_PROJECT_DIR:-$(pwd)}"
+HEADING="$ROOT/docs/decisions/heading.md"
 LEDGER="$ROOT/docs/decisions/README.md"
 NORTH="$ROOT/docs/foundation/north-star.md"
 CAP=70   # max lines pulled from any one file — protect the context budget
@@ -30,6 +31,12 @@ emit "This product compounds only if gains are never re-litigated. Honor what is
 emit "below: build ON the patterns, PAY the open debts, and never re-open a KILL"
 emit "or a FALSIFIED claim. If something here is stale, fix it in the same breath."
 emit ""
+
+if [ -f "$HEADING" ]; then
+  emit "── ⟶ THE HEADING — the one thing to push right now (work this first) ──"
+  quote_file "$HEADING"
+  emit ""
+fi
 
 if [ -f "$NORTH" ]; then
   emit "── North Star (the taste calibration — judge Desirable against this) ──"

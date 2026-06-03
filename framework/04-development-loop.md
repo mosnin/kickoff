@@ -35,6 +35,14 @@ is skipped* on anything that matters.
 
 ---
 
+## 0 · AIM — what's worth doing *now* *(the Heading)*
+
+Don't start with whatever's freshest in mind. Start with the **Heading**
+(`docs/decisions/heading.md`, `framework/09`): the next task is the top-ranked
+debt — the one that clears the binding constraint or cheaply falsifies the
+riskiest assumption. WIP on the critical path is 1: finish before you start. The
+Ratchet already put the Heading in front of you this session; pull from it.
+
 ## 1 · FRAME — is this worth doing? *(Jobs + Norman)*
 
 Before any work, frame it as a problem worth solving.
@@ -136,6 +144,9 @@ conflict, hold the tension and let vision break the tie. Desirability may return
 
 - File the Gate Card from step 6 into `docs/decisions/`, and roll its lesson into
   `docs/decisions/README.md` (a pattern that keeps passing, a debt owed, or a kill).
+- **Update the Heading** (`docs/decisions/heading.md`): the binding constraint may
+  have moved, a falsifier may have resolved, the ranking may have changed. A stale
+  Heading aims you wrong with confidence.
 - Update the affected `docs/` files and `docs/README.md`.
 - Update `CLAUDE.md` if the change touches identity, stack, or structure.
 - **Treat undocumented decisions as not done.** Memory is part of the deliverable.

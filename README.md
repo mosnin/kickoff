@@ -172,9 +172,9 @@ kickoff/
 ├── MAGIC.md             Movement 3 — make it real; observe the five-second spark.
 ├── methods/             The council of five + the engine that keeps them coherent.
 ├── framework/           Depth for each step — loaded on demand, never all at once.
-├── templates/           CLAUDE.md, North Star, brand, value prop, PRD, UX, Gate Card, Proof, Ledger.
-├── .claude/             The Ratchet — a SessionStart hook that re-injects retained memory.
-└── example/             A real brief run end to end — including a stamped Gate Card.
+├── templates/           CLAUDE.md, North Star, brand, value prop, PRD, UX, Gate Card, Proof, Ledger, Heading.
+├── .claude/             The Ratchet — a SessionStart hook that re-injects the Heading + memory.
+└── example/             Two real briefs run through the Ritual (incl. the Even DEX, with artifacts).
 ```
 
 The **Ratchet** (`.claude/hooks/ratchet.sh`, `framework/07`) is the one piece that
