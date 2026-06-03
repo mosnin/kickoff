@@ -13,7 +13,7 @@ how is engineering's to decide.
 ## Summary
 
 *One paragraph: what this is, who it's for, and the outcome it produces. A new
-Council member should grasp the whole thing from this alone.*
+team member should grasp the whole thing from this alone.*
 
 ## Background & problem
 
@@ -71,5 +71,5 @@ ones that block.*
 
 ---
 
-<!-- Council notes: feasibility read (Musk), usability read (Norman),
+<!-- Method notes: feasibility read (Musk), usability read (Norman),
      and any requirement that failed "make it less dumb." -->

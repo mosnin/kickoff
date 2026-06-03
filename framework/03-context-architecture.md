@@ -1,7 +1,7 @@
 # Framework 03 — Context Architecture
 
-> Phase 4 of the kickoff sequence. The high-performance documentation and context
-> system that lets the product grow without the Council losing the plot.
+> Step 4 of the Ritual. The high-performance documentation and context
+> system that lets the product grow without the Ritual losing the plot.
 
 A product accumulates knowledge faster than any context window can hold. The
 difference between a session that's sharp on month six and one that's lost is not
@@ -40,7 +40,7 @@ making Tier 2 so well-indexed that the right detail is always one hop away.
 ```
 docs/
 ├── README.md            THE INDEX — the map of all knowledge. Always current.
-├── foundation/          Founding docs (Phase 3). The immutable inputs.
+├── foundation/          Founding docs (Step 3). The immutable inputs.
 │   ├── brand-kit.md
 │   ├── value-proposition.md
 │   ├── prd.md
@@ -52,8 +52,8 @@ docs/
 └── operations/          Production, economics, go-to-market, metrics.
 ```
 
-Each subtree maps to minds: `foundation/` & `product/` → Jobs + Norman;
-`engineering/` → Musk + Ford; `operations/` → Ford + Rothschild. The owning mind
+Each subtree maps to methods: `foundation/` & `product/` → Jobs + Norman;
+`engineering/` → Musk + Ford; `operations/` → Ford + the banker. The owning method
 keeps its subtree honest.
 
 ---
@@ -71,7 +71,7 @@ index sends sessions to the wrong place or nowhere.
 
 ---
 
-## Decision records (ADRs) — the Council's memory of *why*
+## Decision records (ADRs) — the Ritual's memory of *why*
 
 The most expensive knowledge to lose is *why* a decision was made. Every
 significant decision gets a short, dated ADR in `docs/decisions/`:
@@ -85,7 +85,7 @@ What forced a decision? What constraints and facts were in play?
 
 ## The synthesis
 How the gates ran: desirability → feasibility → deliverability → viability.
-Which mind led, where tension arose, how it resolved. Who held the tiebreaker.
+Which method led, where tension arose, how it resolved. Who held the tiebreaker.
 
 ## Decision
 What we chose, stated plainly.
@@ -120,7 +120,7 @@ Stale docs are worse than no docs; they actively mislead. The rules:
 
 ## How a session uses this system
 
-1. Read `CLAUDE.md` → adopt the Council, learn what's being built, see the rules.
+1. Read `CLAUDE.md` → adopt the methods, learn what's being built, see the rules.
 2. Read `docs/README.md` → get the map of deep knowledge.
 3. Load only the `docs/` entries the current task needs.
 4. Read code just-in-time via search.

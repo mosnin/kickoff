@@ -1,10 +1,10 @@
 # Framework 04 — The Development Loop
 
-> Phase 5 of the kickoff sequence. The repeatable process that builds the product
-> while keeping all five minds cohesive. This phase never ends.
+> Step 5 of the Ritual. The repeatable process that builds the product
+> while keeping all five methods cohesive. This step never ends.
 
-Foundation laid, personas installed, context wired. Now you build — but not the
-way a cold assistant builds. Every cycle runs the full Council, so the product
+Foundation laid, methods installed, context wired. Now you build — but not the
+way a cold assistant builds. Every cycle runs the full Ritual, so the product
 stays revolutionary as it grows instead of decaying into a pile of features.
 
 ---
@@ -15,7 +15,7 @@ stays revolutionary as it grows instead of decaying into a pile of features.
         ┌──────────────────────────────────────────────────────┐
         ▼                                                      │
 1. FRAME ─▶ 2. DESIGN ─▶ 3. ENGINEER ─▶ 4. PRODUCTIZE ─▶ 5. MONETIZE
-   Jobs       Norman        Musk           Ford            Rothschild
+   Jobs       Norman        Musk           Ford            the banker
    Norman     Jobs                                           │
         │                                                    ▼
         └──────── 8. SHIP ◀── 7. RECORD ◀── 6. SYNTHESIZE ──┘
@@ -82,7 +82,7 @@ A thing that works once is a prototype. Make it a product.
 
 ---
 
-## 5 · MONETIZE — make it sustain itself *(Rothschild)*
+## 5 · MONETIZE — make it sustain itself *(the banker)*
 
 Ensure the slice strengthens, not drains, the product's economics.
 
@@ -101,11 +101,11 @@ Run the synthesis order on the whole slice:
 
 ```
 DESIRABILITY → FEASIBILITY → DELIVERABILITY → VIABILITY
-   Jobs·Norman      Musk           Ford          Rothschild
+   Jobs·Norman      Musk           Ford          the banker
 ```
 
 Each is a gate, not a vote. If any gate fails, loop back to the step that owns
-it — don't ship a compromise. Where minds genuinely conflict, hold the tension on
+it — don't ship a compromise. Where methods genuinely conflict, hold the tension on
 purpose and let vision break the tie. The output is *one decision*, cohesive
 across all five facets.
 
@@ -152,5 +152,5 @@ Anything less isn't done. It's a draft wearing a "shipped" label. Loop again.
 
 ---
 
-*Build in cycles, keep all five minds in every cycle, and the product stays
+*Build in cycles, keep all five methods in every cycle, and the product stays
 revolutionary as it grows — which is the only test that matters.*

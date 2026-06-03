@@ -1,131 +1,105 @@
-# kickoff
+# The Ritual
 
-**A metaframework that turns Claude into a founding team.**
+**Drop it in a repo. Claude stops shipping software and starts building products
+people fall for.**
 
-Drop `kickoff` into any repository. The moment Claude reads it, Claude stops
-being a general-purpose assistant and becomes a council of five founding minds —
-each a master of one discipline, all working as one — to take a product from
-zero to revolutionary.
-
----
-
-## What this is
-
-Most AI coding sessions start cold. Claude knows the language, not the product.
-It writes code that compiles but doesn't *matter*. There's no vision, no taste,
-no point of view about who this is for or why it deserves to exist.
-
-`kickoff` fixes that at the source. It is a **bootstrap** — a deterministic
-sequence Claude runs the first time it enters a repo — that installs:
-
-1. **A point of view.** Five personas, each embodying a master of their craft.
-   Claude doesn't *consult* them. Claude *becomes* them.
-2. **A memory.** A `CLAUDE.md` and context architecture authored to the
-   project, so every future session starts warm.
-3. **A foundation.** Your brand kit, value proposition, PRD, and UX docs,
-   imported and wired into Claude's working memory.
-4. **A loop.** A repeatable development process that keeps all five minds
-   cohesive as the product grows.
-
-The output isn't a chatbot that helps you code. It's a founding team that
-ships.
+The Ritual is one idea: before code, run five disciplined ways of thinking —
+vision, the human, the engineer, the producer, the banker — and let nothing ship
+until it's *desirable, feasible, deliverable, and viable* at once. It's not a
+library. It's a way of thinking, installed.
 
 ---
 
-## The five minds
+## See the difference
 
-| Persona | Domain | The question they own |
+Same brief — *"add a way for users to share their work"* — answered two ways.
+
+> **Without the Ritual**
+> Adds a "Share" button. Generates a public link. Ships. ✅ It works.
+
+> **With the Ritual**
+> **Vision:** sharing isn't a button, it's the moment someone's proud of what
+> they made — design *that*. **The human:** a raw public link is scary; people
+> need to know who can see it. **Engineer:** the real constraint is access
+> control, not the link. **Producer:** one sharing primitive, reused everywhere,
+> not five one-offs. **Banker:** every shared link is a free invitation — shared
+> work *is* the growth loop. → Ships a share *experience* that also acquires the
+> next user.
+
+One is a feature. The other is a product decision. That gap is the whole point.
+The full worked example lives in [`example/walkthrough.md`](example/walkthrough.md).
+
+---
+
+## The five methods
+
+You don't *become* these people. You run their **method** — the discipline, not
+the ego.
+
+| Method | Sharpened by | Owns the question |
 |---|---|---|
-| **Steve Jobs** | Vision & brand | *Should this exist, and is it insanely great?* |
-| **Don Norman** | Product & experience | *Is it humane — does it fit how people actually think?* |
-| **Elon Musk** | Engineering | *Is it physically possible, and are we at the limit?* |
-| **Henry Ford** | Production | *Can we make it, repeatably, at scale?* |
-| **Amschel Rothschild** | Monetization & economics | *Does it sustain itself and compound?* |
+| **Vision** | Steve Jobs | *Should this exist, and is it insanely great?* |
+| **The human** | Don Norman | *Is it humane?* |
+| **The engineer** | Elon Musk | *Is it possible, and are we at the limit?* |
+| **The producer** | Henry Ford | *Can we make it, the same way, at scale?* |
+| **The banker** | patient capital | *Does it sustain itself and compound?* |
 
-They are not five opinions in a room. They are one judgment with five facets.
-See [`personas/README.md`](personas/README.md) for how they cohere.
+They don't vote. They pass a decision through four gates — **desirable →
+feasible → deliverable → viable** — and *vision breaks ties.* See
+[`methods/README.md`](methods/README.md).
 
 ---
 
 ## Install
 
-`kickoff` is designed to be imported, not modified. Add it to your product repo:
-
 ```bash
 # As a submodule (recommended — you get updates)
-git submodule add https://github.com/mosnin/kickoff .kickoff
+git submodule add https://github.com/mosnin/kickoff .ritual
 
 # Or vendored (frozen copy)
-git clone --depth 1 https://github.com/mosnin/kickoff .kickoff && rm -rf .kickoff/.git
+git clone --depth 1 https://github.com/mosnin/kickoff .ritual && rm -rf .ritual/.git
 ```
 
-Then point your repo's `CLAUDE.md` at the bootstrap. If you don't have one yet,
-create it with a single line — the kickoff sequence writes the rest:
+Point your repo's `CLAUDE.md` at the Ritual with one line — if you don't have a
+`CLAUDE.md`, this single line is enough; the Ritual writes the rest:
 
 ```markdown
-@.kickoff/KICKOFF.md
+@.ritual/RITUAL.md
 ```
 
-Open Claude in the repo. It will run the kickoff sequence automatically.
-
-> **No build step. No dependencies. No runtime.** kickoff is pure instruction —
-> Markdown that reprograms how Claude thinks for the life of the project.
+Open Claude in the repo. It performs the Ritual. **No build step. No
+dependencies. No runtime. Pure instruction.**
 
 ---
 
-## What happens on first run
-
-When Claude reads `KICKOFF.md`, it executes a five-phase sequence:
+## What happens the first time
 
 ```
-Phase 0 · IDENTITY      Claude becomes the Council. It is never "Claude" again.
-Phase 1 · CLAUDE.md     The project's memory file is authored.
-Phase 2 · PERSONAS      The five minds and their routing are installed.
-Phase 3 · INTAKE        You're asked for brand kit, value prop, PRD, UX docs.
-Phase 4 · CONTEXT       A deep documentation + context system is wired up.
-Phase 5 · BUILD         Product development begins, the kickoff way.
+1 · LIGHT THE METHODS   The five ways of thinking come online.
+2 · WRITE THE MEMORY     Your project's CLAUDE.md is authored.
+3 · TAKE IN FOUNDATION   You hand over brand, value prop, PRD, UX — it wires them in.
+4 · BUILD THE SPINE      A docs/ context system so the product grows without drift.
+5 · BUILD                Development begins — every cycle runs the gates.
 ```
 
-Full detail in [`KICKOFF.md`](KICKOFF.md).
+The whole thing is one page: [`RITUAL.md`](RITUAL.md). Read it; that's the
+product.
 
 ---
 
-## Repository map
+## Map
 
 ```
 kickoff/
-├── README.md                    You are here.
-├── KICKOFF.md                   The master bootstrap protocol.
-├── personas/
-│   ├── README.md                The Council: routing + cohesion engine.
-│   ├── steve-jobs.md            Vision & brand.
-│   ├── don-norman.md            Product & experience.
-│   ├── elon-musk.md             Engineering.
-│   ├── henry-ford.md            Production.
-│   └── amschel-rothschild.md    Monetization & economics.
-├── framework/
-│   ├── 01-authoring-claude-md.md   How to write the project's CLAUDE.md.
-│   ├── 02-document-intake.md       How to import and wire founding docs.
-│   ├── 03-context-architecture.md  The high-performance context system.
-│   └── 04-development-loop.md       The repeatable build process.
-└── templates/
-    ├── CLAUDE.md.template
-    ├── brand-kit.md
-    ├── value-proposition.md
-    ├── prd.md
-    └── user-experience.md
+├── README.md            You are here.
+├── RITUAL.md            The one-page core. Read this.
+├── methods/             The five methods + the engine that keeps them coherent.
+├── framework/           Depth for each step — loaded on demand, never all at once.
+├── templates/           CLAUDE.md, brand, value prop, PRD, UX — the user fills these.
+└── example/             A real brief run end to end through the Ritual.
 ```
 
 ---
 
-## Philosophy
-
-> "You've got to start with the customer experience and work backwards to the
-> technology." — Steve Jobs
-
-kickoff is built backwards from the same belief. It doesn't start with code. It
-starts with *who this is for and why it should exist*, and refuses to write a
-line until that's clear. Then it brings the full force of engineering,
-production, and economics to make the vision real — and durable.
-
-Simple. Opinionated. Insanely great. That's the whole point.
+> *Start with what it should feel like. Work back to the technology. Let nothing
+> ship that any one method would be ashamed of.*

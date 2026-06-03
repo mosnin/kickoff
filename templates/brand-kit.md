@@ -4,7 +4,7 @@
 > it stands for, how it looks, and the feeling it leaves behind. If the brand
 > isn't clear here, it won't be clear in the product.
 
-Fill what you have; leave the rest for the Council to draft with you. Replace
+Fill what you have; leave the rest for the Ritual to draft with you. Replace
 every prompt in *italics*.
 
 ---
@@ -52,7 +52,7 @@ what it means in practice.*
 - **Typography:** *typefaces and where each is used*
 - **Imagery & iconography:** *style, do's and don'ts*
 - **Layout & space:** *density, grid, the role of whitespace*
-- **Motion:** *how things move; the personality of transitions*
+- **Motion:** *how things move; the methodlity of transitions*
 
 ## The feeling
 
@@ -67,5 +67,5 @@ lost the plot.*
 
 ---
 
-<!-- Council notes (filled during intake): gaps, tensions, and where the brand
+<!-- Method notes (filled during intake): gaps, tensions, and where the brand
      and the product must be reconciled. -->

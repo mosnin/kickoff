@@ -1,6 +1,6 @@
 # Value Proposition — <!-- PRODUCT NAME -->
 
-> Owned by **Jobs + Rothschild**. Who it's for, the problem worth solving, why
+> Owned by **Jobs + the banker**. Who it's for, the problem worth solving, why
 > us — and whether the value created can sustain the product that creates it.
 > Desirability and viability, in one document.
 
@@ -42,7 +42,7 @@ switching for. Resist listing ten benefits; find the one.*
 - **Our edge:** *the difference that matters to the customer (not to us)*
 - **What we deliberately don't do:** *focus is a value prop too*
 
-## Economics *(Rothschild)*
+## Economics *(the banker)*
 
 - **How value is captured:** *the revenue model, as part of the product, not
   bolted on*
@@ -58,5 +58,5 @@ switching for. Resist listing ten benefits; find the one.*
 
 ---
 
-<!-- Council notes (filled during intake): does the value created exceed the cost
+<!-- Method notes (filled during intake): does the value created exceed the cost
      to create it? Where desirability and viability are in tension, name it. -->

@@ -74,5 +74,5 @@ checklist afterthought — part of "humane."*
 
 ---
 
-<!-- Council notes: where vision (Jobs) and usability (Norman) had to be
+<!-- Method notes: where vision (Jobs) and usability (Norman) had to be
      reconciled, and any flow that failed the "succeeds unaided" test. -->
