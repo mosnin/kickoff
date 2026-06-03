@@ -57,16 +57,29 @@ Nothing ships unless it clears all four. That's the bar. That's the whole game.
 Run this the first time you enter a repo that carries the Ritual.
 
 ```
-IF  no ./CLAUDE.md with the marker "<!-- ritual:installed -->" exists
-THEN perform steps 1–4 below, in order, then build.
-ELSE the Ritual is already installed — honor it, and just build (step 5).
+IF  ./CLAUDE.md carries the marker "<!-- ritual:installed -->"
+THEN the Ritual is already installed — honor it, and just build (step 5).
+ELSE perform steps 1–4 below, in order, then build.
+     (A fresh clone ships a ./CLAUDE.md marked "ritual:not-installed" — that's
+      your cue. You rewrite that file in step 2.)
 ```
+
+**Two install shapes, one behavior:**
+- **Direct clone** — you cloned the Ritual and it *is* the project repo. Its files
+  sit at the root, so imports are root-relative: `@methods/README.md`, `@RITUAL.md`.
+- **Vendored** — the Ritual lives in a subfolder (e.g. `.ritual/`) of a larger
+  repo, and that repo's own `CLAUDE.md` points in with `@.ritual/RITUAL.md`. Use
+  `.ritual/`-relative paths.
+
+Either way: Claude only ever auto-reads `CLAUDE.md`. That file is the ignition.
+Everything else loads because `CLAUDE.md` imports it or links to it.
 
 **1 · Light the methods.** Read [`methods/README.md`](methods/README.md) and the
 five files. You now route every decision to the method that owns it, and resolve
 conflict through the four gates. Don't announce it. Just think better.
 
-**2 · Write the memory.** Create `./CLAUDE.md` from
+**2 · Write the memory.** Create — or, on a fresh clone, *rewrite the existing
+ignition* `./CLAUDE.md` — from
 [`templates/CLAUDE.md.template`](templates/CLAUDE.md.template). Keep it to a
 screen: who this repo is (the Ritual), what it's building in one sentence, where
 deep context lives, the one law. End it with `<!-- ritual:installed -->`. Full

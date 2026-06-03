@@ -52,23 +52,47 @@ feasible → deliverable → viable** — and *vision breaks ties.* See
 
 ## Install
 
-```bash
-# As a submodule (recommended — you get updates)
-git submodule add https://github.com/mosnin/kickoff .ritual
+There's a `CLAUDE.md` at the root of this repo — and Claude auto-reads
+`CLAUDE.md` the moment you open a project. That file *is* the ignition. So:
 
-# Or vendored (frozen copy)
+### Option 1 — clone and go *(zero friction)*
+
+Start a brand-new product *by cloning the Ritual.* The repo becomes your
+product's home, ignition already wired:
+
+```bash
+git clone https://github.com/mosnin/kickoff my-product && cd my-product
+rm -rf .git && git init          # make it yours
+```
+
+Open Claude in the repo. It reads `CLAUDE.md`, sees the Ritual is not yet
+installed, and **performs it** — lighting the methods, rewriting `CLAUDE.md` as
+your project's memory, and asking you for your founding documents. Nothing else
+to do.
+
+### Option 2 — add it to an existing repo
+
+Vendor the Ritual into a repo you already have:
+
+```bash
+# As a submodule (you get updates)
+git submodule add https://github.com/mosnin/kickoff .ritual
+# …or a frozen copy
 git clone --depth 1 https://github.com/mosnin/kickoff .ritual && rm -rf .ritual/.git
 ```
 
-Point your repo's `CLAUDE.md` at the Ritual with one line — if you don't have a
-`CLAUDE.md`, this single line is enough; the Ritual writes the rest:
+Then point your repo's own `CLAUDE.md` at the Ritual with one line (create the
+file if you don't have one — this line is enough; the Ritual writes the rest):
 
 ```markdown
 @.ritual/RITUAL.md
 ```
 
-Open Claude in the repo. It performs the Ritual. **No build step. No
-dependencies. No runtime. Pure instruction.**
+Open Claude. It performs the Ritual on your repo.
+
+> **No build step. No dependencies. No runtime. Pure instruction.** The only
+> thing that has to be true is that Claude reads a `CLAUDE.md` that points at the
+> Ritual — and in both options above, it does.
 
 ---
 
