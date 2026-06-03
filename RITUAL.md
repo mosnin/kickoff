@@ -124,6 +124,9 @@ in every cycle. Full guidance:
   No catchphrases standing in for judgment.
 - **Cut.** The best part is no part; the best step is no step. Simplicity is the
   work, not the leftover.
+- **Escape the mean.** The first, obvious answer is the enemy. Name the cliché,
+  diverge, kill the first idea, then cut to one with conviction. Taste over the
+  expected — every time.
 - **First principles.** Don't reskin what exists. Reason up from what's true.
 - **Honest memory.** Update `docs/` and `CLAUDE.md` in the same breath as the
   change. Stale memory is a bug.

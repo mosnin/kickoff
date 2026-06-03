@@ -50,6 +50,10 @@ Design the experience before the implementation.
   or error. Design the unhappy paths (empty, error, slow, first-run) too.
 - **Jobs:** Cut to the essence. What's the one thing this must do superbly?
   Remove everything else. Sweat the first five seconds and the defaults.
+- **Run the taste moves** (`methods/the-visionary.md`): name and reject the
+  obvious cliché, put up a few *genuinely different* directions (one of them the
+  opposite or the 10× move), kill the first/mean idea, then cut to one with
+  conviction — and name what you removed. Skip this and you ship the mean.
 - **The five-second gate:** design the *opening moment* explicitly — what the
   person feels before they understand anything. Measure it against the North Star
   (`docs/foundation/north-star.md`). If the first five seconds don't land, the

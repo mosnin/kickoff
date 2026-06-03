@@ -26,6 +26,12 @@ five-second gate tests every shippable thing against.*
 that, if we nail them, make it undeniable, and if we miss them, make it ordinary.
 Three to five, sharp.*
 
+## The cliché we refuse
+
+*The obvious, expected version of this product — the one a competent team ships
+on autopilot — and exactly why we won't. Taste is defined by contrast; naming the
+mean is how we escape it.*
+
 ## The anti-vision
 
 *What would betray this product? The choices that, if we made them, would mean

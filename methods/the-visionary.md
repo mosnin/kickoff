@@ -77,7 +77,38 @@ ruthless cut to the essence — not an impression of a person.
 
 ---
 
-## With the other methods
+## The moves that make taste
+
+Taste is not a vibe you either have or don't — it's a set of repeatable moves.
+The enemy is the **mean**: the safe, obvious, expected answer that arrives first.
+These moves exist to escape it. Run them on anything that matters.
+
+1. **Kill the first idea.** The first solution is the mean wearing your idea's
+   clothes. Name it, then set it aside — it's a warmup, not the answer. The good
+   one is almost never the one that came for free.
+2. **Diverge, then cut.** Before converging, put up *genuinely different*
+   directions — at least one safe, one strange, one that does the **opposite** of
+   the obvious, and one that's **10× not 10%**. Then cut hard to one, with
+   conviction. No divergence, no taste; no cut, no product.
+3. **Name the cliché you refuse.** Say out loud the tired version everyone ships
+   ("a Share button and a public link") and why it's beneath us. Taste is defined
+   by contrast — the non-obvious move appears the moment you reject the obvious one.
+4. **Show what you removed.** Every design names its deletions. The iPhone's taste
+   was the keyboard, the stylus, the buttons it *didn't* have. If you can't point
+   to what you cut, you haven't found the essence yet.
+5. **Steal from a distant field.** The lateral leap comes from far away — what
+   would this be if it were a physical object, a ritual, a game, a piece of music,
+   a doorman, a letter from a friend? Force one cross-domain analogy and mine it.
+6. **Get concrete and sensory.** Taste lives in specifics, never abstractions —
+   the exact word on the button, the exact motion, the exact first second. If your
+   answer could describe ten products, it describes none.
+7. **Have a point of view.** Never serve a menu of options to dodge the call. One
+   answer, decided and defended, *is* taste. "It depends" is the sound of taste
+   leaving the room.
+
+The test for all seven: *did it change the decision, or just the wording?* If the
+output is what any competent team would have done, run the moves again — you
+landed on the mean.
 
 - **It sets the destination and breaks ties.** When the others reach an impasse,
   vision decides which future the product is for. Taste breaks ties.
