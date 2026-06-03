@@ -52,3 +52,19 @@ Falsifiable claim to prove first: *"On historical ETH/USDC flow, the auction
 returns ≥50% of measured LVR to LPs when N≥2 bidders compete."* Smallest proof: a
 backtest + agent-based auction simulation. If it fails → FALSIFIED → back to the
 Ritual.
+
+---
+
+### Update 2026-06-03 — Proof 0001 (the Altar ran)
+
+Ran the auction simulation (`sim/lvr_auction_sim.py`, see
+`proof-0001-f1.md`). Result, recorded honestly:
+
+- **Auction mechanism → TESTED (model):** ≥2 bidders return 74–99% of LVR;
+  monopoly returns **0%**. The mechanism works; *bidder competition* is the real
+  risk, not the mechanism.
+- **LVR magnitude (F2) → still REASONED:** the toy's magnitude model was ~6× off
+  the analytic and is untrustworthy. Not grounded.
+- **Binding constraint moved:** from "does the auction return rent?" (yes, with
+  ≥2) to "can we guarantee ≥2 bidders, and is LVR large on real flow?" Heading
+  re-pointed. Not FALSIFIED — the vision survived its first contact with a model.

@@ -12,14 +12,24 @@
   proceeds*, not to build defenses. *(meta-pattern from Card 0001)*
 - **Make hidden value flows visible.** The differentiator is showing the user the
   edge they got back — transparency is the product, not a feature.
+- **A clean toy result can hide a broken sub-model.** Proof 0001 nailed the
+  auction ratio but its LVR-magnitude accounting was 6× off the analytic. Trust
+  ratios from a toy; never trust its absolute magnitudes — go to real data.
+
+## Proven (rung climbed — build on these)
+
+- **F1 auction mechanism · TESTED (model).** ≥2 bidders return 74–99% of LVR;
+  monopoly returns 0%. *(Proof 0001)* The mechanism is not the risk; bidder
+  competition is.
 
 ## Open debts (owed to reality)
 
 | Debt | Gate / Card | Evidence owed | Owner |
 |------|-------------|---------------|-------|
-| **F1** Auctions clear with ≥2 competitive bidders (else rent→0) | Card 0001 · all gates | Backtest + agent sim on ETH/USDC: ≥50% of LVR returned to LPs when N≥2 | eng |
-| **F2** Edge only exists on volatile/high-volume pairs | Card 0001 · Viable | LVR sensitivity across pairs from historical σ, volume | eng |
-| **F3** Block winner can't sandwich the trader | Card 0001 · Desirable | Design: bound price to oracle, cap spread; adversarial test | eng |
+| **Bidder bootstrap** guarantee ≥2 competing bidders (N=1 → 0%) | Card 0001 · all | design + GTM: subsidy / searcher incentives | eng+founder |
+| **F2** Is LVR large enough on real flow? (toy undercounted) | Card 0001 · Viable | real ETH/USDC backtest with correct fee/LVR accounting | eng |
+| **F1 → OBSERVED** real-data + live confirmation | Card 0001 · all | backtest, then testnet pool with real searchers | eng+founder |
+| **F3** Block winner can't sandwich the trader | Card 0001 · Desirable | oracle-bounded price, cap spread; adversarial test | eng |
 | **Taste fork** A vs B vs C (which future) | Card 0001 | Founder decision | founder |
 | 5-second spark is real | Card 0001 · Desirable | Testnet pool, watch 5 real traders' first swap | founder |
 
