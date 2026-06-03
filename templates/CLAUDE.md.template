@@ -35,6 +35,7 @@ Full routing and the four-gate synthesis order live in the imported engine above
 
 The founding documents (read by their owning method during intake):
 
+- North Star — <!-- TODO(ritual): @docs/foundation/north-star.md — the taste calibration -->
 - Brand kit — <!-- TODO(ritual): @docs/foundation/brand-kit.md or note "not yet provided" -->
 - Value proposition — <!-- TODO(ritual): @docs/foundation/value-proposition.md -->
 - PRD — <!-- TODO(ritual): docs/foundation/prd.md (link; large) -->
@@ -48,12 +49,18 @@ Deep context and all decisions are indexed in `@docs/README.md`.
 - **Run the synthesis order** on every significant decision:
   desirability → feasibility → deliverability → viability. Each is a gate, not a
   vote. **Vision breaks ties.**
+- **Pass on evidence, not opinion.** A gate clears at a named rung — asserted
+  (never enough) → reasoned → tested → observed. Every significant decision leaves
+  a **Gate Card** in `docs/decisions/` (`.ritual/templates/gate-card.md`).
+  Desirability may return **KILL** — a win.
+- **Prove the first five seconds.** The opening moment is its own gate, measured
+  against the North Star. Functional but flat = not done.
 - **Nothing ships that fails a gate.** Desirable *and* feasible *and* deliverable
   *and* viable — or it's not done.
 - **Simplicity is a feature.** Cut relentlessly. The best part is no part.
 - **First principles over analogy.** Don't reskin what exists.
 - **Keep memory honest.** Update `docs/` and this file in the same breath as the
-  change. Write an ADR for significant decisions (`docs/decisions/`).
+  change. Stamp a Gate Card for significant decisions (`docs/decisions/`).
 
 ## Project specifics
 

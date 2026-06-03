@@ -45,7 +45,8 @@ docs/
 │   ├── value-proposition.md
 │   ├── prd.md
 │   └── user-experience.md
-├── decisions/           ADRs — one file per significant decision, dated, numbered.
+├── decisions/           Gate Cards — one stamped verdict per significant decision.
+│   ├── README.md         Rollup: patterns that keep passing, debts owed, kills.
 │   └── 0001-example.md
 ├── product/             Specs, flows, requirements as they evolve.
 ├── engineering/         Architecture, systems, interfaces, trade-offs.
@@ -71,33 +72,23 @@ index sends sessions to the wrong place or nowhere.
 
 ---
 
-## Decision records (ADRs) — the Ritual's memory of *why*
+## Decision records — the Gate Cards are the memory of *why*
 
-The most expensive knowledge to lose is *why* a decision was made. Every
-significant decision gets a short, dated ADR in `docs/decisions/`:
+The most expensive knowledge to lose is *why* a decision was made. In the Ritual,
+the decision record **is the Gate Card** (`templates/gate-card.md`,
+`framework/05-the-gate-card.md`): every significant decision gets a short, stamped
+card in `docs/decisions/` — the four gate verdicts, the evidence rung behind each,
+the five-second check, the tie-break, the verdict (SHIP/LOOP/KILL), and any
+verification debt. It captures not just *what* and *why*, but *on what evidence*.
 
-```markdown
-# 0007 — <decision title>
-Date: YYYY-MM-DD · Status: accepted | superseded by 00NN
+Cards are append-only history. Don't rewrite them; supersede them with a new one
+and link back. This is how a session in month twelve understands month two without
+re-litigating it.
 
-## Context
-What forced a decision? What constraints and facts were in play?
-
-## The synthesis
-How the gates ran: desirability → feasibility → deliverability → viability.
-Which method led, where tension arose, how it resolved. Who held the tiebreaker.
-
-## Decision
-What we chose, stated plainly.
-
-## Consequences
-What this makes easy, what it makes hard, what we're now committed to,
-what we'd revisit and when.
-```
-
-ADRs are append-only history. Don't rewrite them; supersede them with a new one
-and link back. This is how a session in month twelve understands month two
-without re-litigating it.
+**The cards compound.** Keep a rollup at `docs/decisions/README.md`: patterns that
+keep clearing the gates (promote to defaults), debts still owed (gates left at
+REASONED), and kills and why (the entries that stop you re-litigating bad ideas a
+year later). A Ritual whose cards compound gets sharper with every decision.
 
 ---
 
@@ -124,7 +115,7 @@ Stale docs are worse than no docs; they actively mislead. The rules:
 2. Read `docs/README.md` → get the map of deep knowledge.
 3. Load only the `docs/` entries the current task needs.
 4. Read code just-in-time via search.
-5. On any significant decision → write an ADR and update the index.
+5. On any significant decision → stamp a Gate Card and update the index.
 6. On any material change → update the affected docs and `CLAUDE.md`.
 
 This keeps every session warm, fast, and cohesive — no matter how large the
@@ -140,4 +131,5 @@ product grows.
   point.
 - The progressive-disclosure tiers and maintenance rules are written down (here,
   and summarized in `CLAUDE.md`).
-- At least the foundation docs are indexed, and an ADR template exists.
+- At least the foundation docs are indexed, and the Gate Card flow is in place
+  (`docs/decisions/` with a rollup `README.md`).

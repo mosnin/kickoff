@@ -50,9 +50,13 @@ Design the experience before the implementation.
   or error. Design the unhappy paths (empty, error, slow, first-run) too.
 - **Jobs:** Cut to the essence. What's the one thing this must do superbly?
   Remove everything else. Sweat the first five seconds and the defaults.
+- **The five-second gate:** design the *opening moment* explicitly — what the
+  person feels before they understand anything. Measure it against the North Star
+  (`docs/foundation/north-star.md`). If the first five seconds don't land, the
+  slice isn't desirable yet, however good the rest is.
 - **Output:** the smallest slice that is *complete and great* — not a fraction of
   a great thing, but a small whole thing. Define what "a real person succeeds
-  unaided" means here.
+  unaided" means here, and how you'll *observe* it (not assume it).
 
 ---
 
@@ -95,7 +99,7 @@ Ensure the slice strengthens, not drains, the product's economics.
 
 ---
 
-## 6 · SYNTHESIZE — reconcile to one decision *(cohesion engine)*
+## 6 · SYNTHESIZE — reconcile to one decision, and stamp it *(cohesion engine)*
 
 Run the synthesis order on the whole slice:
 
@@ -104,17 +108,23 @@ DESIRABILITY → FEASIBILITY → DELIVERABILITY → VIABILITY
    Jobs·Norman      Musk           Ford          the banker
 ```
 
-Each is a gate, not a vote. If any gate fails, loop back to the step that owns
-it — don't ship a compromise. Where methods genuinely conflict, hold the tension on
-purpose and let vision break the tie. The output is *one decision*, cohesive
-across all five facets.
+Each is a gate, not a vote, and **each passes by evidence, not opinion** — name
+the rung (asserted → reasoned → tested → observed). If any gate fails, loop back
+to the step that owns it; don't ship a compromise. Where methods genuinely
+conflict, hold the tension and let vision break the tie. Desirability may return
+**KILL** — and that's a win.
+
+- **Output:** a **Gate Card** (`templates/gate-card.md`) in `docs/decisions/` —
+  the four verdicts, the evidence rung behind each, the five-second check, the
+  tie-break, the verdict (SHIP / LOOP / KILL), and any verification debt. No card,
+  not done. Full system: `framework/05-the-gate-card.md`.
 
 ---
 
 ## 7 · RECORD — update memory *(whoever owns the subtree)*
 
-- Write an ADR for any significant decision (Framework 03 format): the context,
-  how the gates ran, the decision, the consequences.
+- Stamp a Gate Card for any significant decision (Framework 05): the four gate
+  verdicts, the evidence rung behind each, the tie-break, the verdict, the debt.
 - Update the affected `docs/` files and `docs/README.md`.
 - Update `CLAUDE.md` if the change touches identity, stack, or structure.
 - **Treat undocumented decisions as not done.** Memory is part of the deliverable.
@@ -134,21 +144,25 @@ across all five facets.
 - **For small work:** run the loop lightly and fast — frame in a sentence, design
   in your head, but never skip the synthesis gates or the record step.
 - **For significant work:** run it deliberately, with explicit outputs at each
-  step and an ADR at the end.
+  step and a Gate Card at the end.
 - **Always:** one voice to the user. Deliberate as five; deliver as one.
 
 ---
 
 ## The standing bar
 
-A slice is done only when it is, at once:
+A slice is done only when it is, at once — and each backed by evidence at an
+honest rung, not asserted:
 
-- **Desirable** — Jobs and Norman would be proud to put their names on it.
-- **Feasible** — built at the limit, not faked.
-- **Deliverable** — reproducible and operable at scale.
-- **Viable** — it helps the product sustain and compound itself.
+- **Desirable** — proud to put our names on it, and the *opening moment is
+  proven*, ideally observed in a real first-run.
+- **Feasible** — built at the limit, not faked; something actually *ran*.
+- **Deliverable** — reproducible and operable at scale; the path *repeated*.
+- **Viable** — it helps the product sustain and compound itself; backed by a
+  *number*.
 
-Anything less isn't done. It's a draft wearing a "shipped" label. Loop again.
+…and it left a **Gate Card**. Anything less isn't done — it's a draft wearing a
+"shipped" label. Loop again.
 
 ---
 

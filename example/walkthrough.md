@@ -87,26 +87,32 @@ impression. Sharing *is* the growth loop. So:
   lives. Never tax the invitation — that's burning the flywheel for a one-time
   coin. *(The human method confirms: no dark patterns, no forced friction.)*
 
-### 6 · Run the gates — synthesize to one decision
+### 6 · Run the gates — and stamp the verdict
 
-```
-DESIRABLE    ✅  A proud, safe "here's my work" moment — not a scary URL.   (vision · human)
-FEASIBLE     ✅  One access-control primitive; everything else is a view.    (engineer)
-DELIVERABLE  ✅  Same sharing path for every object, forever.                (producer)
-VIABLE       ✅  Each share acquires the next user; depth is monetized.      (banker)
-```
+No gate passes on a vibe. Each names its evidence and how *real* that evidence is
+(asserted → reasoned → tested → observed). The deliberation becomes a **Gate
+Card** — the artifact that proves the Ritual ran:
 
-All four clear. Vision had no tie to break — the methods converged. **Ship it.**
+> **Gate Card 0003 — Sharing is an access-control primitive, not a link feature**
+> Date: 2026-06-03 · Verdict: **SHIP** · Led by: vision
+>
+> | Gate | Verdict | Rung | Evidence |
+> |---|---|---|---|
+> | **Desirable** | PASS | OBSERVED | First-run watched with 5 beta users: 4 reached "this is mine, and it's safe" unaided |
+> | ↳ 5-second gate | PASS | TESTED | Share-sheet storyboard shown to 3 people — all read "Maya can view this" correctly at a glance |
+> | **Feasible** | PASS | TESTED | Spike of the single authorization primitive (subject→resource→capability) runs; link/embed/export are thin views over it |
+> | **Deliverable** | PASS | REASONED | One sharing path designed for every object — *not yet reproduced twice* ⚠ |
+> | **Viable** | PASS | TESTED | Beta logs: each shared link brings ~0.3 new users; sharing free, sharer-depth paid |
+>
+> **Tension:** producer wanted five flows (link/embed/export/invite/publish);
+> vision cut to one primitive. **Tie-break:** converged — the simple thing was
+> also the manufacturable thing.
+> **Verdict:** SHIP. **Debt:** Deliverable is only REASONED — prove the path
+> reproduces (build it for a *second* object type) before scaling.
 
-### 7 · Record — the decision, remembered
-
-> **ADR 0003 — Sharing is an access-control primitive, not a link feature**
-> *Context:* brief was "add sharing." *Synthesis:* reframed to a proud/safe
-> handoff; engineer identified access control as the true constraint; producer
-> standardized one path; banker identified shared work as the growth loop.
-> *Decision:* build a single authorization primitive; share UI is a thin view;
-> sharing stays free, depth is paid. *Consequences:* every future shareable object
-> inherits sharing + security; growth and product are now the same surface.
+Notice the card is honest: three gates reached real evidence; one is still
+*reasoned*, so it's flagged as debt to pay before scale — not hand-waved into a ✅.
+That honesty is the difference between a verdict and a vibe.
 
 ---
 

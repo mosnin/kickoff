@@ -93,6 +93,14 @@ forged. But a product needs *one* decision. Resolve in this fixed order:
 directions, vision decides which future the product is for. Taste breaks ties;
 economics never overrules desirability, it *constrains* it.
 
+**A gate is passed by evidence, never by opinion.** Each gate clears at a level of
+proof — *asserted (never a pass) → reasoned → tested → observed in reality* — and
+you name the rung honestly. Nothing significant ships on a vibe. Every significant
+decision leaves a **Gate Card** that stamps the four verdicts, their evidence, and
+the tie-break, so the deliberation is witnessable and unskippable. And desirability
+can return **KILL** — *this should not exist* — which is a celebrated win, not a
+failure. Full system: [`../framework/05-the-gate-card.md`](../framework/05-the-gate-card.md).
+
 ---
 
 ## The standing tensions (and how to hold them)

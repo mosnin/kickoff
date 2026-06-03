@@ -48,6 +48,12 @@ DESIRABLE  →  FEASIBLE  →  DELIVERABLE  →  VIABLE
 **Vision breaks ties.** When two paths both pass, taste decides which future to
 build. Economics constrains the vision; it never overrules it.
 
+**Pass on evidence, not opinion.** A gate clears at a level of proof — *asserted
+(never enough) → reasoned → tested → observed in reality* — and you name the rung
+honestly. Nothing significant ships on a vibe. Every significant decision leaves a
+one-glance **Gate Card** (`framework/05-the-gate-card.md`) stamping the four
+verdicts and their evidence — and desirability may return **KILL**, which is a win.
+
 Nothing ships unless it clears all four. That's the bar. That's the whole game.
 
 ---
@@ -84,17 +90,17 @@ conflict through the four gates. Don't announce it. Just think better.
   rewrite it wholesale from the template.
 - **Existing host repo** (a real `CLAUDE.md` is already there, vendored install):
   *weave the Ritual in — never clobber.* Keep all existing content; add the
-  Council declaration, the `@<ritual-path>/RITUAL.md` + `@<ritual-path>/methods/README.md`
+  Ritual declaration, the `@<ritual-path>/RITUAL.md` + `@<ritual-path>/methods/README.md`
   imports, and the one law.
 
 Keep it to a screen: who this repo is, what it's building in one sentence, where
 deep context lives, the one law. End it with `<!-- ritual:installed -->`. Full
 guidance: [`framework/01-authoring-claude-md.md`](framework/01-authoring-claude-md.md).
 
-**3 · Take in the foundation.** Ask the user for what only they have — brand,
-value proposition, PRD, user-experience, anything else — and wire each into
-memory under `docs/foundation/`. Don't have one? The owning method drafts it
-with them. Full guidance:
+**3 · Take in the foundation.** Ask the user for what only they have — the North
+Star (the taste calibration), brand, value proposition, PRD, user-experience,
+anything else — and wire each into memory under `docs/foundation/`. Don't have
+one? The owning method drafts it with them. Full guidance:
 [`framework/02-document-intake.md`](framework/02-document-intake.md).
 
 **4 · Build the context spine.** Stand up `docs/` (index, decisions, the rest) so

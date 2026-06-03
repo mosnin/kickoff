@@ -55,6 +55,12 @@ They don't vote. They pass a decision through four gates — **desirable →
 feasible → deliverable → viable** — and *vision breaks ties.* See
 [`methods/README.md`](methods/README.md).
 
+And no gate passes on a vibe. Each clears at a named level of evidence —
+*asserted → reasoned → tested → **observed in reality*** — and every significant
+decision leaves a one-glance **Gate Card** stamping the verdicts and the proof
+behind them. That's what makes the Ritual a closed loop instead of a clever
+prompt: it collides with reality, and it can say **KILL**.
+
 ---
 
 ## Install
@@ -120,7 +126,8 @@ Open Claude. It performs the Ritual on your repo.
 2 · WRITE THE MEMORY     Your project's CLAUDE.md is authored.
 3 · TAKE IN FOUNDATION   You hand over brand, value prop, PRD, UX — it wires them in.
 4 · BUILD THE SPINE      A docs/ context system so the product grows without drift.
-5 · BUILD                Development begins — every cycle runs the gates.
+5 · BUILD                Development begins — every cycle runs the gates and
+                         stamps a Gate Card backed by real evidence.
 ```
 
 The whole thing is one page: [`RITUAL.md`](RITUAL.md). Read it; that's the
@@ -136,8 +143,8 @@ kickoff/
 ├── RITUAL.md            The one-page core. Read this.
 ├── methods/             The five methods + the engine that keeps them coherent.
 ├── framework/           Depth for each step — loaded on demand, never all at once.
-├── templates/           CLAUDE.md, brand, value prop, PRD, UX — the user fills these.
-└── example/             A real brief run end to end through the Ritual.
+├── templates/           CLAUDE.md, North Star, brand, value prop, PRD, UX, Gate Card.
+└── example/             A real brief run end to end — including a stamped Gate Card.
 ```
 
 ---

@@ -9,15 +9,20 @@ This step brings that truth in and makes it part of memory.
 
 ---
 
-## The five founding documents
+## The founding documents
 
 | Document | What it carries | Owning method(s) |
 |---|---|---|
+| **North Star** | The soul, the five-second promise, what "insanely great" means here | vision |
 | **Brand kit** | Voice, values, visual identity, positioning, the feeling | Jobs |
 | **Value proposition** | Who it's for, the problem, why us, the wedge | Jobs + the banker |
 | **PRD** | What we're building, requirements, scope, success criteria | Norman + Musk |
 | **User experience doc** | Flows, principles, states, the felt journey | Norman |
 | **Anything else** | Research, competitive teardown, pitch, constraints, data | routed by domain |
+
+The **North Star** (`templates/north-star.md`) is the calibration for taste — the
+reference the *Desirable* gate measures every decision against. If the user has no
+explicit one, vision drafts it with them first; without it, "great" stays generic.
 
 "Anything else" is open on purpose. Take whatever the user has — a messy doc, a
 Figma link, a voice memo transcript, a spreadsheet of unit economics. Every real
@@ -33,11 +38,12 @@ When Steps 1–2 are complete, ask the user directly and warmly (don't bury it):
 > the Ritual needs your founding documents. Share whatever you have: paste it,
 > point me to a file, or drop files in `docs/foundation/`.
 >
-> 1. **Brand kit** — voice, values, visual identity, positioning
-> 2. **Value proposition** — who it's for, the problem, why us
-> 3. **PRD** — what we're building and the requirements
-> 4. **User experience doc** — flows, principles, the felt experience
-> 5. **Anything else** — research, competitive teardown, pitch, constraints
+> 1. **North Star** — the soul, the five-second promise, what great means here
+> 2. **Brand kit** — voice, values, visual identity, positioning
+> 3. **Value proposition** — who it's for, the problem, why us
+> 4. **PRD** — what we're building and the requirements
+> 5. **User experience doc** — flows, principles, the felt experience
+> 6. **Anything else** — research, competitive teardown, pitch, constraints
 >
 > Don't have one yet? Say so — the owning method will draft it with you from a
 > template. We don't build on guesses.
@@ -63,7 +69,7 @@ For every document received:
    requirements; the banker reads the value prop for whether the economics can
    close.
 4. **Note gaps and tensions.** Record what's missing, contradictory, or
-   underspecified — as an ADR or a note in the relevant `docs/` file. Surface the
+   underspecified — as a note or Gate Card in the relevant `docs/` file. Surface the
    important ones to the user. *This is where the Ritual earns its keep:* a fresh
    pair of master's eyes on the founding docs.
 5. **Reconcile across docs.** Do the brand promise, the value prop, the PRD, and

@@ -37,8 +37,8 @@ In order:
    product isn't clear yet.
 
 3. **The foundation imports.** Links/imports to the founding docs in
-   `docs/foundation/` (brand kit, value proposition, PRD, UX). These may be
-   `TODO(ritual)` placeholders until Step 3 fills them.
+   `docs/foundation/` (North Star, brand kit, value proposition, PRD, UX). These
+   may be `TODO(ritual)` placeholders until Step 3 fills them.
 
 4. **The context map.** A single import of `docs/README.md` — the entry point to
    all deep knowledge. Don't inline the docs; point to their index.
@@ -85,7 +85,7 @@ referenced file into context. Use them deliberately:
 - **Import when small and always-relevant:** the value proposition, the brand
   voice summary.
 - **Link, don't import, when large or situational:** full PRD, detailed specs,
-  ADRs. These load on demand via the docs index, not on every session. (This is
+  Gate Cards. These load on demand via the docs index, not on every session. (This is
   the progressive-disclosure rule from Framework 03 — protect the context budget.)
 
 Rule of thumb: *if a new session needs it to make good decisions on turn one,
