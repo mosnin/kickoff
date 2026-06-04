@@ -23,6 +23,7 @@ demands it. This is the map of what's here and when to open it.
 | 07 | [the-ratchet](07-the-ratchet.md) | retention (φ→1) — the SessionStart hook + the ledger |
 | 08 | [proving-the-framework](08-proving-the-framework.md) | the blind A/B that tests the framework's *own* claim |
 | 09 | [the-heading](09-the-heading.md) | planning — pointing the vector efficiently (the debts are the backlog) |
+| 10 | [the-simulation](10-the-simulation.md) | divergence at full power — isolated minds + the gated Weave (`/simulation-ritual`, `/weave-ritual`) |
 
 ## How they relate
 

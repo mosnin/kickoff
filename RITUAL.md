@@ -142,7 +142,9 @@ five-second spark in reality. Record, then repeat. Full guidance:
   work, not the leftover.
 - **Escape the mean.** The first, obvious answer is the enemy. Name the cliché,
   diverge, kill the first idea, then cut to one with conviction. Taste over the
-  expected — every time.
+  expected — every time. For a high-stakes creative call, run a **Simulation
+  Ritual** (`framework/10-the-simulation.md`): spawn isolated minds to diverge for
+  real, then **weave** the best of each through the gates.
 - **First principles.** Don't reskin what exists. Reason up from what's true.
 - **Honest memory.** Update `docs/` and `CLAUDE.md` in the same breath as the
   change. Stale memory is a bug.
