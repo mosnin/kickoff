@@ -122,6 +122,23 @@ main, .nav, .foot{ position:relative; z-index:2; }
 .btn:hover{ border-color:var(--red); color:#fff; box-shadow:0 0 18px rgba(225,6,0,.3); transform:translateY(-1px); }
 .btn-primary{ border-color:var(--red-deep); background:linear-gradient(180deg, rgba(94,10,15,.5), rgba(225,6,0,.08)); }
 .btn-primary:hover{ background:linear-gradient(180deg, rgba(225,6,0,.25), rgba(94,10,15,.25)); }
+/* hero one-paste import */
+.cmd-label{ margin:30px 0 8px; color:var(--ink-dim); font-size:10px; letter-spacing:.34em; text-transform:uppercase; }
+.hero-cmd{
+  display:flex; align-items:center; gap:10px; margin:0 auto; max-width:620px;
+  border:1px solid var(--line); background:rgba(5,5,7,.72); padding:9px 9px 9px 14px;
+  text-align:left; box-shadow:0 0 30px rgba(225,6,0,.07);
+}
+.hero-cmd .prompt{ color:var(--red); flex:none; }
+.hero-cmd code{ flex:1; min-width:0; color:var(--ink); font-size:12.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.copy-btn{
+  flex:none; border:1px solid var(--red-deep); background:transparent; color:var(--ink);
+  font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+  padding:7px 14px; cursor:pointer; transition:.2s;
+}
+.copy-btn:hover{ border-color:var(--red); color:#fff; box-shadow:0 0 14px rgba(225,6,0,.32); }
+.copy-btn.copied{ color:#7fd07f; border-color:#3a7; box-shadow:none; }
+
 .scrollcue{ margin-top:58px; color:var(--ink-dim); font-size:10px; letter-spacing:.42em; text-transform:uppercase; }
 .scrollcue::before{ content:""; display:block; width:1px; height:38px; margin:0 auto 14px; background:linear-gradient(var(--red), transparent); animation:cueGlow 3.2s ease-in-out infinite; }
 @keyframes cueGlow{ 0%,100%{ opacity:.4; } 50%{ opacity:1; } }

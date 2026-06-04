@@ -132,6 +132,28 @@
     });
   });
 
+  /* ---- copy-to-clipboard (hero one-paste import) ---- */
+  document.querySelectorAll(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const sel = btn.getAttribute("data-copy");
+      const el = sel && document.querySelector(sel);
+      const text = (el ? el.textContent : "").trim();
+      if (!text) return;
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (_) {
+        const t = document.createElement("textarea");
+        t.value = text; t.style.position = "fixed"; t.style.opacity = "0";
+        document.body.appendChild(t); t.select();
+        try { document.execCommand("copy"); } catch (e) {}
+        t.remove();
+      }
+      const old = btn.textContent;
+      btn.textContent = "copied ✓"; btn.classList.add("copied");
+      setTimeout(() => { btn.textContent = old; btn.classList.remove("copied"); }, 1600);
+    });
+  });
+
   /* ---- BENCHMARK bars ---- */
   const DATA = {
     quality: [["Easy brief", 12, false], ["Hard / creative", 28, false], ["Hardest (systems)", 19, false]],
