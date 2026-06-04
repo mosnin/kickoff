@@ -140,6 +140,16 @@ When the Ritual runs in an existing repo, it **weaves into** your current
 
 Open Claude. It performs the Ritual on your repo.
 
+### Option 3 — run it on another platform *(opt-in, never the default)*
+
+Claude Code is the Ritual's native home, but the *thinking* is pure instruction —
+it works anywhere that accepts a system prompt. [`integrations/`](integrations/)
+has paste-anywhere adapters: a single zero-dependency block
+([`system-prompt.md`](integrations/system-prompt.md)) plus per-platform guides for
+**Cursor / Windsurf**, **Claude Cowork, OpenCLAW, Hermes, the raw API, and any
+agent**. Turn it on only for the tasks you choose — nothing about your default
+flow changes.
+
 > **No build step. No dependencies. No runtime. Pure instruction.** The only
 > thing that has to be true is that Claude reads a `CLAUDE.md` that points at the
 > Ritual — and in both options above, it does.
@@ -174,6 +184,7 @@ kickoff/
 ├── framework/           Depth for each step — loaded on demand, never all at once.
 ├── templates/           CLAUDE.md, North Star, brand, value prop, PRD, UX, Gate Card, Proof, Ledger, Heading.
 ├── .claude/             The Ratchet — a SessionStart hook that re-injects the Heading + memory.
+├── integrations/        Opt-in adapters to run the Ritual on other platforms (Cursor, Cowork, raw API…).
 └── example/             A real brief run end to end — including a stamped Gate Card.
 ```
 
