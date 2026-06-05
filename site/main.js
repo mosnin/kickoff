@@ -72,6 +72,37 @@
     });
   });
 
+  /* PLATFORM PICKER: swap the copyable core/command in place — no GitHub trip */
+  const picker = document.getElementById("platform-picker");
+  const pkWhere = document.getElementById("picker-where");
+  const pkTag = document.getElementById("paste-tag");
+  const pkTarget = document.getElementById("paste-target");
+  if (picker && pkTarget) {
+    const CORE = pkTarget.textContent;   // the portable Ritual core (rendered in the page)
+    const CMD = "git clone --depth 1 https://github.com/mosnin/kickoff .ritual && rm -rf .ritual/.git && bash .ritual/install.sh";
+    const P = {
+      cowork:     { tag: "paste into Cowork → project instructions", body: CORE,
+        where: "In Cowork, open Settings → Cowork settings → your project's instructions (or global instructions for every project). Paste this in — Cowork injects it on every task in that project, exactly like Claude Code's CLAUDE.md." },
+      cursor:     { tag: "paste into .cursor/rules/ritual.mdc", body: CORE,
+        where: "Cursor: create a file .cursor/rules/ritual.mdc. Windsurf: use .windsurfrules at the repo root. Paste this in — it loads as a project rule every session." },
+      hermes:     { tag: "paste into ~/.hermes/SOUL.md", body: CORE,
+        where: "Paste this into ~/.hermes/SOUL.md — slot #1 of Hermes' system prompt, read at the start of every session." },
+      openclaw:   { tag: "append to your workspace AGENTS.md", body: CORE,
+        where: "Append this to AGENTS.md in your OpenClaw workspace — it's injected on the first turn of every session." },
+      claudecode: { tag: "run in your repo", body: CMD,
+        where: "Run this one line in your repo. It wires @.ritual/RITUAL.md into your CLAUDE.md — which Claude auto-reads every session. Then open Claude; it performs the Ritual." },
+    };
+    const apply = (k) => {
+      const c = P[k] || P.cowork;
+      pkWhere.textContent = c.where;
+      pkTag.textContent = c.tag;
+      pkTarget.textContent = c.body;
+      pkTarget.classList.toggle("is-cmd", k === "claudecode");
+    };
+    picker.addEventListener("change", () => apply(picker.value));
+    apply(picker.value);
+  }
+
   const fit = (c) => {
     const dpr = Math.min(devicePixelRatio || 1, 2), w = c.clientWidth, h = c.clientHeight;
     c.width = w * dpr; c.height = h * dpr;

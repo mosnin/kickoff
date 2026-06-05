@@ -322,20 +322,28 @@
 </pre>
 
     <div class="bench-block" style="margin-top:42px">
-      <h4>Inside Claude Cowork — 2 minutes, no repo</h4>
-      <div class="how-grid">
-        <div class="how-item"><span class="r">1 ·</span> In Cowork, open <span class="r">Settings → Cowork settings</span> and find your project&#39;s <span class="r">instructions</span> box <span class="dim">(or <em>global instructions</em> to cover every project).</span></div>
-        <div class="how-item"><span class="r">2 ·</span> <span class="r">Copy the Ritual core below</span> and paste it into that box. <span class="dim">That paste is the activation — Cowork injects it on every task in the project, exactly like Claude Code&#39;s CLAUDE.md. No repo needed.</span></div>
-        <div class="how-item"><span class="r">3 ·</span> Optional memory: add a file called <code>decisions.md</code> to the project as a context document. <span class="dim">Cowork reads it every single time — that&#39;s the Ratchet. Append each decision and it compounds.</span></div>
-        <div class="how-item"><span class="r">4 ·</span> Open the project and give it a task. <span class="dim">The gates run; the ledger&#39;s already in context. Nothing re-pasted, ever.</span></div>
+      <h4>Get it into your platform — copy, paste, done</h4>
+      <p class="sec-tag" style="margin-bottom:18px">Pick where you work. Copy the core below. Paste it into the one file that platform reads every session. That&#39;s the whole install — no repo, no GitHub trip.</p>
+
+      <div class="picker-row">
+        <label class="picker-label" for="platform-picker">platform</label>
+        <select id="platform-picker" class="picker" aria-label="Choose your platform">
+          <option value="cowork">Claude Cowork</option>
+          <option value="cursor">Cursor / Windsurf</option>
+          <option value="hermes">Hermes</option>
+          <option value="openclaw">OpenClaw</option>
+          <option value="claudecode">Claude Code (CLI · IDE · web)</option>
+        </select>
       </div>
+
+      <p class="picker-where" id="picker-where"></p>
 
       <div class="paste">
         <div class="paste-bar">
-          <span>paste into Cowork → project instructions</span>
-          <button class="copy-btn" data-copy="#cowork-core" type="button" aria-label="Copy the Ritual core to paste into Cowork">copy the core</button>
+          <span id="paste-tag">paste into Cowork → project instructions</span>
+          <button class="copy-btn" data-copy="#paste-target" id="paste-copy" type="button" aria-label="Copy to clipboard">copy</button>
         </div>
-        <pre class="paste-body" id="cowork-core">You are running THE RITUAL — a decision discipline. Apply it to this task.
+        <pre class="paste-body" id="paste-target">You are running THE RITUAL — a decision discipline. Apply it to this task.
 
 0 · RIGHT-SIZE. If this is execution / reversible / obvious, just do it well —
 skip the ceremony below. Only run the gates on a real decision (what to build,
