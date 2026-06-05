@@ -28,6 +28,50 @@
   addEventListener("resize", setP, { passive: true });
   setP();
 
+  /* ---- INTERACTIONS FIRST: bind nav + copy before any decoration, so a
+         canvas/animation hiccup on some browser can never break the nav ---- */
+
+  /* WORKING NAV: smooth scroll with sticky-nav offset */
+  function navOffset() {
+    const nav = document.querySelector(".nav");
+    return (nav ? nav.offsetHeight : 56) + 14;
+  }
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener("click", (e) => {
+      const id = a.getAttribute("href");
+      if (!id || id.length < 2) return;
+      const tgt = document.querySelector(id);
+      if (!tgt) return;
+      e.preventDefault();
+      const y = tgt.getBoundingClientRect().top + window.scrollY - navOffset();
+      window.scrollTo({ top: Math.max(0, y), behavior: reduce ? "auto" : "smooth" });
+      history.replaceState(null, "", id);
+    });
+  });
+
+  /* copy-to-clipboard (hero import + the Cowork / portable core) */
+  document.querySelectorAll(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const sel = btn.getAttribute("data-copy");
+      const el = sel && document.querySelector(sel);
+      const text = (el ? el.textContent : "").trim();
+      if (!text) return;
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (_) {
+        const t = document.createElement("textarea");
+        t.value = text; t.style.position = "fixed"; t.style.opacity = "0";
+        document.body.appendChild(t); t.select();
+        try { document.execCommand("copy"); } catch (e) {}
+        t.remove();
+      }
+      const old = btn.dataset.label || btn.textContent;
+      btn.dataset.label = old;
+      btn.textContent = "copied ✓"; btn.classList.add("copied");
+      setTimeout(() => { btn.textContent = old; btn.classList.remove("copied"); }, 1600);
+    });
+  });
+
   const fit = (c) => {
     const dpr = Math.min(devicePixelRatio || 1, 2), w = c.clientWidth, h = c.clientHeight;
     c.width = w * dpr; c.height = h * dpr;
@@ -113,46 +157,6 @@
     addEventListener("scroll", upd, { passive: true });
     addEventListener("resize", () => { size(); upd(); }, { passive: true });
   }
-
-  /* ---- WORKING NAV: smooth scroll with sticky-nav offset ---- */
-  function navOffset() {
-    const nav = document.querySelector(".nav");
-    return (nav ? nav.offsetHeight : 56) + 14;
-  }
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener("click", (e) => {
-      const id = a.getAttribute("href");
-      if (!id || id.length < 2) return;
-      const tgt = document.querySelector(id);
-      if (!tgt) return;
-      e.preventDefault();
-      const y = tgt.getBoundingClientRect().top + window.scrollY - navOffset();
-      window.scrollTo({ top: Math.max(0, y), behavior: reduce ? "auto" : "smooth" });
-      history.replaceState(null, "", id);
-    });
-  });
-
-  /* ---- copy-to-clipboard (hero one-paste import) ---- */
-  document.querySelectorAll(".copy-btn").forEach((btn) => {
-    btn.addEventListener("click", async () => {
-      const sel = btn.getAttribute("data-copy");
-      const el = sel && document.querySelector(sel);
-      const text = (el ? el.textContent : "").trim();
-      if (!text) return;
-      try {
-        await navigator.clipboard.writeText(text);
-      } catch (_) {
-        const t = document.createElement("textarea");
-        t.value = text; t.style.position = "fixed"; t.style.opacity = "0";
-        document.body.appendChild(t); t.select();
-        try { document.execCommand("copy"); } catch (e) {}
-        t.remove();
-      }
-      const old = btn.textContent;
-      btn.textContent = "copied ✓"; btn.classList.add("copied");
-      setTimeout(() => { btn.textContent = old; btn.classList.remove("copied"); }, 1600);
-    });
-  });
 
   /* ---- BENCHMARK bars ---- */
   const DATA = {

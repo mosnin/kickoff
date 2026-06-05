@@ -324,10 +324,58 @@
     <div class="bench-block" style="margin-top:42px">
       <h4>Inside Claude Cowork — 2 minutes, no repo</h4>
       <div class="how-grid">
-        <div class="how-item"><span class="r">1 ·</span> Open <span class="r">Settings → Cowork settings</span>, and find your project&#39;s <span class="r">instructions</span> (or <em>global instructions</em> for every project).</div>
-        <div class="how-item"><span class="r">2 ·</span> Paste in the Ritual core — the one zero-dependency block, <code>integrations/system-prompt.md</code>. <span class="dim">That paste is the activation: Cowork injects it on every task in the project — its CLAUDE.md.</span></div>
-        <div class="how-item"><span class="r">3 ·</span> Drop <code>north-star.md</code> and <code>decisions.md</code> into the project folder. <span class="dim">Cowork reads them every single time — that&#39;s your memory, the Ratchet.</span></div>
-        <div class="how-item"><span class="r">4 ·</span> Open the project and give it a task. The gates run; the ledger&#39;s already in context. <span class="dim">Nothing re-pasted, ever.</span></div>
+        <div class="how-item"><span class="r">1 ·</span> In Cowork, open <span class="r">Settings → Cowork settings</span> and find your project&#39;s <span class="r">instructions</span> box <span class="dim">(or <em>global instructions</em> to cover every project).</span></div>
+        <div class="how-item"><span class="r">2 ·</span> <span class="r">Copy the Ritual core below</span> and paste it into that box. <span class="dim">That paste is the activation — Cowork injects it on every task in the project, exactly like Claude Code&#39;s CLAUDE.md. No repo needed.</span></div>
+        <div class="how-item"><span class="r">3 ·</span> Optional memory: add a file called <code>decisions.md</code> to the project as a context document. <span class="dim">Cowork reads it every single time — that&#39;s the Ratchet. Append each decision and it compounds.</span></div>
+        <div class="how-item"><span class="r">4 ·</span> Open the project and give it a task. <span class="dim">The gates run; the ledger&#39;s already in context. Nothing re-pasted, ever.</span></div>
+      </div>
+
+      <div class="paste">
+        <div class="paste-bar">
+          <span>paste into Cowork → project instructions</span>
+          <button class="copy-btn" data-copy="#cowork-core" type="button" aria-label="Copy the Ritual core to paste into Cowork">copy the core</button>
+        </div>
+        <pre class="paste-body" id="cowork-core">You are running THE RITUAL — a decision discipline. Apply it to this task.
+
+0 · RIGHT-SIZE. If this is execution / reversible / obvious, just do it well —
+skip the ceremony below. Only run the gates on a real decision (what to build,
+how it should feel, anything hard to reverse or direction-setting). When unsure,
+run them.
+
+1 · ESCAPE THE MEAN. Reject the first, obvious answer. Name the cliché out loud,
+put up genuinely different options (include an Opposite and a 10×), kill the
+first idea, then cut to one with conviction — and name what you removed.
+
+2 · RUN THE FOUR GATES, in order. Each passes on evidence, not opinion:
+- DESIRABLE — should it exist, is it great? (incl. does the first five seconds land?)
+- FEASIBLE — is it possible, at the limit?
+- DELIVERABLE — can it be made repeatably, at scale?
+- VIABLE — does it sustain itself and compound?
+Fail an early gate → stop; nothing downstream saves it. Vision breaks ties.
+Desirability may return KILL ("this should not exist") — a celebrated win.
+
+3 · NAME THE EVIDENCE RUNG, honestly:
+ASSERTED (a wish — never a pass) → REASONED (an argument) → TESTED (it ran)
+→ OBSERVED (reality answered). Never claim a rung you didn&#39;t reach. Evidence
+you cannot gather is owed to reality — hand it to the human, never invent it.
+
+4 · RED-TEAM before you commit. Attack your own conclusion: which rung is
+inflated? what&#39;s the strongest case to KILL this? what did I miss (the worst-day
+user, the failure mode, the cheaper thing that makes this unnecessary)? Revise.
+
+5 · HAND OVER THE FOUNDER CALLS. Taste (which future), reality (real
+users/numbers/the five seconds), and the final ship/kill are the human&#39;s to make.
+Surface them clearly; do not fake them.
+
+OUTPUT — one glance:
+DECISION:    &lt;one line&gt;
+DESIRABLE    &lt;PASS/FAIL/KILL · rung&gt; — &lt;evidence&gt;
+FEASIBLE     &lt;PASS/FAIL · rung&gt; — &lt;evidence&gt;
+DELIVERABLE  &lt;PASS/FAIL · rung&gt; — &lt;evidence&gt;
+VIABLE       &lt;PASS/FAIL · rung&gt; — &lt;evidence&gt;
+VERDICT:     SHIP / LOOP / KILL
+OWED TO REALITY: &lt;the evidence you couldn&#39;t gather — handed to the human&gt;
+NEXT:        &lt;the cheapest experiment that proves the riskiest assumption&gt;</pre>
       </div>
     </div>
 
