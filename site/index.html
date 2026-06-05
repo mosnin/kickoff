@@ -31,6 +31,7 @@
     <a href="#methods">methods</a>
     <a href="#simulation">simulation</a>
     <a href="#bench">benchmarks</a>
+    <a href="#anywhere">anywhere</a>
     <a class="nav-cta" href="#install">install</a>
   </nav>
 </header>
@@ -293,6 +294,58 @@
       Or start fresh: clone it as your product and the ignition is already wired.
       The whole protocol is one page.
     </p>
+  </section>
+
+  <!-- ░░ RUN IT ANYWHERE ░░ -->
+  <section id="anywhere" class="band reveal">
+    <div class="band-head">
+      <span class="sec-no">X</span>
+      <h2>Run It Anywhere</h2>
+      <p class="sec-tag">Claude Code is its home — but the Ritual is pure instruction, so it travels. Not by pasting it when you remember: by installing it where the platform <em>already looks</em>.</p>
+    </div>
+
+    <p class="bench-intro">
+      The trick to real compatibility: <span class="r">every capable agent already
+      auto-reads one file every session</span> — its own <code>CLAUDE.md</code>.
+      Install the Ritual into <em>that</em> native slot and it activates itself.
+      The agent never has to volunteer.
+    </p>
+
+    <pre class="ascii" aria-label="where each platform auto-loads instructions">
+  PLATFORM             READS EVERY SESSION            install the core into…
+  ───────────────────────────────────────────────────────────────────────────
+  Claude Code          <span class="r">CLAUDE.md</span>                      one-line import (above)
+  Claude Cowork        <span class="r">project instructions</span>           paste the core, once
+  OpenClaw             <span class="r">AGENTS.md</span> <span class="dim">(+ BOOTSTRAP.md)</span>      near 1:1 — self-performs
+  Hermes               <span class="r">~/.hermes/SOUL.md</span> <span class="dim">(slot #1)</span>     paste the core
+  Cursor / Windsurf    <span class="r">.cursor/rules/*.mdc</span>            paste the core
+</pre>
+
+    <div class="bench-block" style="margin-top:42px">
+      <h4>Inside Claude Cowork — 2 minutes, no repo</h4>
+      <div class="how-grid">
+        <div class="how-item"><span class="r">1 ·</span> Open <span class="r">Settings → Cowork settings</span>, and find your project&#39;s <span class="r">instructions</span> (or <em>global instructions</em> for every project).</div>
+        <div class="how-item"><span class="r">2 ·</span> Paste in the Ritual core — the one zero-dependency block, <code>integrations/system-prompt.md</code>. <span class="dim">That paste is the activation: Cowork injects it on every task in the project — its CLAUDE.md.</span></div>
+        <div class="how-item"><span class="r">3 ·</span> Drop <code>north-star.md</code> and <code>decisions.md</code> into the project folder. <span class="dim">Cowork reads them every single time — that&#39;s your memory, the Ratchet.</span></div>
+        <div class="how-item"><span class="r">4 ·</span> Open the project and give it a task. The gates run; the ledger&#39;s already in context. <span class="dim">Nothing re-pasted, ever.</span></div>
+      </div>
+    </div>
+
+    <div class="honest">
+      <pre class="ascii">┌─ HONEST ───────────────────────────────────────────────────┐</pre>
+      <p>
+        The <span class="r">auto-load slot for each platform is from its own docs</span> —
+        that&#39;s verified. The install steps haven&#39;t each been run against a live
+        node, so they&#39;re <em>reasoned, not tested</em> — and where a platform&#39;s
+        deeper features are unconfirmed, the adapter says so instead of pretending.
+      </p>
+      <p>
+        Full per-platform adapters — OpenClaw, Hermes, Cowork, Cursor — live in
+        <span class="r">integrations/</span> in the repo, each with its exact file,
+        its install, and an honest feature map.
+      </p>
+      <pre class="ascii">└────────────────────────────────────────────────────────────┘</pre>
+    </div>
   </section>
 
 </main>
