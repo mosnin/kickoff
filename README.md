@@ -142,13 +142,14 @@ Open Claude. It performs the Ritual on your repo.
 
 ### Option 3 — run it on another platform *(opt-in, never the default)*
 
-Claude Code is the Ritual's native home, but the *thinking* is pure instruction —
-it works anywhere that accepts a system prompt. [`integrations/`](integrations/)
-has paste-anywhere adapters: a single zero-dependency block
-([`system-prompt.md`](integrations/system-prompt.md)) plus per-platform guides for
-**Cursor / Windsurf**, **Claude Cowork, OpenCLAW, Hermes, the raw API, and any
-agent**. Turn it on only for the tasks you choose — nothing about your default
-flow changes.
+Claude Code is the Ritual's native home, but every capable agent already
+auto-reads one file each session — its own `CLAUDE.md`. [`integrations/`](integrations/)
+installs the Ritual *into that native slot* so it self-activates, with dedicated
+adapters for **OpenClaw** (`AGENTS.md`), **Hermes** (`SOUL.md`), **Claude Cowork**
+(project instructions), and **Cursor / Windsurf** (rules file) — plus a generic
+recipe for anything else and a single zero-dependency core
+([`system-prompt.md`](integrations/system-prompt.md)). Turn it on only where you
+choose — nothing about your default flow changes.
 
 > **No build step. No dependencies. No runtime. Pure instruction.** The only
 > thing that has to be true is that Claude reads a `CLAUDE.md` that points at the

@@ -1,54 +1,68 @@
-# Adapter — Claude Cowork · OpenCLAW · Hermes · raw API · any agent
+# Adapter — any other platform (the generic recipe)
 
-The universal pattern for any platform that accepts instructions. The **core
-always works**; the two advanced features use whatever that platform offers, with
-a sequential fallback that needs nothing special.
+For a platform **not** covered by its own adapter
+([Claude Code](claude-code.md), [Cursor/Windsurf](cursor.md),
+[Cowork](claude-cowork.md), [OpenClaw](openclaw.md), [Hermes](hermes.md)), use
+this recipe. The lesson from those five: **don't rely on the agent volunteering to
+load the Ritual — wire it into the file the platform already reads on its own.**
+Every capable agent has one.
 
-> **Honest note:** I haven't verified the exact config conventions of every named
-> platform here. So this adapter gives you the *mechanism-agnostic* path that works
-> regardless, plus a checklist to confirm the platform-specific wiring. If you
-> share a platform's docs, I'll write a precise, tested adapter for it.
+## The one question that makes it work
 
-## 1 · Inject the core (always works)
-Put [`system-prompt.md`](system-prompt.md) wherever that platform takes standing
-instructions:
-- a **system prompt** (most agent platforms / raw API: the `system` field),
-- a **per-task instruction / preamble** (paste it above the task),
-- a **rules / context file** if the platform has one.
+> **"Which file does this platform inject into the system prompt on every
+> session, without me asking?"**
 
-That alone gives you right-sizing, the four gates, the evidence ladder, the
-red-team pass, KILL, and Founder Calls — on any model.
+Find that file and you've found the install target. It's the platform's
+`CLAUDE.md`. Examples of what it's called in the wild:
 
-## 2 · Ratchet (memory across runs)
-No hook needed. Keep a short **ledger** (`docs/decisions/README.md` from
-`templates/decision-ledger.md`) and **prepend it to the task context** each run —
-either manually, or by whatever "always-include this file/memory" feature the
-platform has. The rule: *build on the patterns, pay the open debts, never re-open a
-kill.* That's retention without a hook.
+| Platform | The auto-loaded file |
+|---|---|
+| Claude Code | `CLAUDE.md` |
+| OpenClaw | `AGENTS.md` (+ `SOUL.md`, `BOOTSTRAP.md`) |
+| Hermes | `~/.hermes/SOUL.md` |
+| Cursor / Windsurf | `.cursor/rules/*.mdc` / `.windsurfrules` |
+| Cowork | project instructions / project context files |
+| raw API / SDK | the `system` field |
 
-## 3 · Simulation (isolated divergence → weave)
-Pick the strongest your platform supports:
-- **Native sub-agents / parallel tasks** → spawn one isolated agent per perspective
-  (Visionary, Humanist, Opposite, 10×, Distant Field), collect, weave.
-- **Parallel API calls** → fire N independent `messages` calls, each with a
-  *different* perspective in its system prompt and **no shared history** (that's the
-  isolation), collect the outputs, then run one more call that weaves them through
-  the gates.
-- **Sequential fallback (works anywhere)** → run each perspective in a **fresh
-  conversation** (fresh = isolated), save each take, then paste them all into one
-  final chat and ask it to weave through the gates. Slower, same result.
+Most agent runtimes converge on an `AGENTS.md` or a rules file. When in doubt,
+that's your first guess.
 
-Full method either way: `framework/10-the-simulation.md`.
+## The recipe
 
-## Per-platform checklist (confirm in the platform's docs)
-- [ ] Where do standing instructions go? (system prompt / rules file / preamble)
-- [ ] Can it auto-include a file each run? (→ that's your Ratchet)
-- [ ] Can it spawn sub-agents or parallel isolated calls? (→ native Simulation;
-      else use the fresh-conversation fallback)
-- [ ] Does it support MCP? If yes, an MCP server is the cleanest cross-tool
-      integration (one server, many platforms) — ask and I'll spec it.
+1. **Find the auto-load file** (the question above). Paste
+   [`system-prompt.md`](system-prompt.md) into it. → the core is now live every
+   session, no agent discretion involved.
+2. **Ratchet** — if the platform auto-reads a *folder* or lets you list extra
+   context files, drop the decision ledger there. Otherwise add one line to the
+   auto-load file: *"At session start, read docs/decisions/README.md and honor
+   it."* That's retention without a hook.
+3. **Simulation** — pick the strongest the platform offers:
+   - **native sub-agents / parallel tasks** → one isolated agent per perspective, then weave;
+   - **parallel API calls** → N independent `messages` calls, each a *different*
+     perspective, **no shared history** (that's the isolation), then one weave call;
+   - **sequential fallback (works anywhere)** → each perspective in a **fresh
+     conversation**, save the takes, weave them in a final chat.
+   Method: `framework/10-the-simulation.md`.
 
-## The one rule for all of them
-It's **opt-in**: include the Ritual only on the tasks where you want it. Leave it
-out and the platform behaves exactly as it did before — nothing about the default
-flow changes.
+## If there's no auto-load file at all
+
+A rare platform may have *no* persistent instruction slot. Then there's no honest
+"install" — only per-task paste. Say so plainly; don't pretend a paste-when-you-
+remember block is auto-activation. (It isn't — that's the gap this folder exists
+to close.)
+
+## Checklist
+- [ ] Found the file the platform injects every session? → paste the core there.
+- [ ] Can it auto-include a folder/extra files? → that's your Ratchet.
+- [ ] Sub-agents or parallel isolated calls? → native Simulation; else sequential.
+- [ ] Supports MCP? → an MCP server is the cleanest cross-tool path (one server,
+      many platforms) — ask and I'll spec it.
+
+## The one rule
+**Opt-in.** Install it only where you want it; leave it out and the platform
+behaves exactly as before.
+
+---
+
+**Point me at a platform's docs and I'll write it a dedicated adapter** like the
+five above — exact file, exact install, honest feature map.
