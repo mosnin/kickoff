@@ -103,12 +103,18 @@ product's home, ignition already wired:
 ```bash
 git clone https://github.com/mosnin/kickoff my-product && cd my-product
 rm -rf .git && git init          # make it yours
+rm -rf docs/                     # clear the Ritual's own working memory — start blank
 ```
 
 Open Claude in the repo. It reads `CLAUDE.md`, sees the Ritual is not yet
 installed, and **performs it** — lighting the methods, rewriting `CLAUDE.md` as
 your project's memory, and asking you for your founding documents. Nothing else
 to do.
+
+> The `docs/` you just cleared held *the Ritual's own* North Star and decision
+> ledger — it dogfoods itself (that's how the benchmark on the site is recorded).
+> You want a blank slate for *your* product, so remove it; Claude rebuilds `docs/`
+> for you during setup.
 
 ### Option 2 — add it to an existing repo
 

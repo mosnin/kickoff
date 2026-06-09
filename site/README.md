@@ -1,65 +1,60 @@
 # The Ritual — landing page
 
-A zero-build static landing page in a black-and-red ASCII/ritual aesthetic.
-Everything animated is hand-built: a canvas ritual-circle (five rotating method
-nodes), a drifting ember glyph field, decode-on-scroll text, and animated ASCII
-benchmark bars. Headings are set in **Jacquard 12**; body in **JetBrains Mono**.
+A zero-build static landing page in a black-and-red ASCII/ritual aesthetic. The
+motion is calm and hand-built: two faint concentric rings behind the hero, a
+sparse drifting ember field, a scroll-driven background gradient, spring
+section-reveals (Motion, with an IntersectionObserver fallback), and animated
+ASCII benchmark bars. Headings are set in **Jacquard 12**; body in **JetBrains
+Mono**.
 
 Three files, no framework, no dependencies, no build step:
 
 ```
 site/
-├── index.html    structure + copy (honest benchmark numbers, incl. the null)
-├── styles.css    the aesthetic (black/red, scanlines, vignette, ascii frames)
-├── main.js       canvas sigil + embers + decode + animated bars
+├── index.html    structure + copy (hero, the law, the arc, methods,
+│                 simulation, benchmarks, gate card, install, run-anywhere)
+├── styles.css    the aesthetic (black/red, grain, vignette, ascii frames)
+├── main.js       nav + copy + platform picker, then the canvas/animation layer
 └── vercel.json   static headers + clean URLs
 ```
 
+`main.js` binds the interactions (smooth-scroll nav, copy buttons, the platform
+dropdown) **first**, before any canvas code, so a decorative hiccup can never
+break navigation.
+
 ## Deploy to Vercel
 
-It's a **static site** (no build step). `vercel.json` here declares exactly that —
-no framework, no install, no build, serve the folder as-is — so Vercel won't try
-to build it. The one thing that matters: **deploy the `site/` folder, not the repo
-root** (the repo root is the framework, with no `index.html`).
+It's a **static site** (no build step). There are two `vercel.json` files and
+**one blessed path** — pick it and ignore the rest:
 
-### Option A — CLI (simplest, recommended)
-Run from *inside* `site/`, so this folder *is* the project — no root-directory
-confusion:
-```bash
-cd site
-npx vercel          # first run: links/creates the project → preview URL
-npx vercel --prod   # promote to production
-```
-On the first run accept the prompts (Framework = **Other** is auto-detected from
-`vercel.json`; build command stays empty). Done.
+> **Blessed path — deploy from the repo root.** The root `vercel.json` sets
+> `outputDirectory: site`, so importing the repo on Vercel with **default
+> settings just works** — it serves `site/` and won't try to build. Leave Root
+> Directory blank, Framework = **Other**, all build/install commands empty.
 
-### Option B — Git import (dashboard)
-1. Push the repo, then on **vercel.com → Add New → Project**, import it.
-2. **Set Root Directory to `site`.** ← this is the step people miss.
-3. Framework Preset: **Other** · Build Command: *(leave empty)* · Output
-   Directory: *(leave empty / `.`)* · Install Command: *(leave empty)*.
-4. Deploy. Every push to the repo redeploys.
+The `site/vercel.json` is only used if you instead point Vercel's **Root
+Directory at `site/`** (or drag-and-drop the folder). Don't do both — choose one:
 
-### Option C — drag & drop
-Drag the **`site/`** folder onto **vercel.com/new** → instant deploy, no config.
+- **Git import (recommended):** vercel.com → Add New → Project → import the repo →
+  Deploy. The root `vercel.json` handles the rest. Every push redeploys.
+- **CLI:** `npx vercel --prod` from the repo root.
+- **Drag & drop:** drag the **`site/`** folder onto vercel.com/new.
 
 ### Sanity check before deploy
 ```bash
 cd site && python3 -m http.server 8000   # → http://localhost:8000 should render
 ```
-If it renders locally, it will render on Vercel — there's no build to differ.
-
-## Local preview
-
-Any static server works:
-```bash
-cd site && python3 -m http.server 8000   # → http://localhost:8000
-```
+If it renders locally, it renders on Vercel — there's no build to differ.
 
 ## Notes
 
-- Fully responsive; respects `prefers-reduced-motion` (animations freeze to a
-  static frame, all content still reveals).
-- The benchmark figures are the real A/B results — including the published null
-  (no reasoning-accuracy edge on clean problems). Honesty is the brand; don't
-  inflate them.
+- Fully responsive; the nav links stay reachable on mobile (a scrollable row, not
+  hidden). Respects `prefers-reduced-motion` (animation freezes to a static frame;
+  all content still reveals).
+- **The benchmark figures are real but early.** They come from 5 informal paired
+  trials (framework vs. baseline, same model, fixed rubric) in an isolated Claude
+  environment — an honest *TESTED* rung, not a large-scale benchmark. The page says
+  so, in the "Method" line under the bars. Honesty is the brand: don't inflate
+  them, and if you run a bigger test, update the numbers and the method together.
+</content>
+</invoke>
