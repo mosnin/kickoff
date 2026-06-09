@@ -66,6 +66,24 @@ worth closing. A system that will lie to flatter you is worse than no system.
 
 ---
 
+## Cite or downgrade — the rung must show its work
+
+"Never fake a rung" is only enforceable if a rung has to *point at something.* So
+make it mechanical, not a matter of good faith:
+
+**A gate at TESTED or OBSERVED must cite the concrete artifact that earns it** — the
+command output, the file, the spike, the number *with its source*, the watched
+first-run. No citation, no claim: the gate **auto-downgrades to REASONED**, and the
+missing evidence is written as **owed to reality**.
+
+That is the whole rule. REASONED needs an argument; TESTED needs *a thing that ran*;
+OBSERVED needs *reality's answer* — each named, each pointing somewhere a skeptic
+could go and look. **A rung you can't cite is a rung you didn't reach.** This turns
+the evidence ladder from an honor code into a checklist a reviewer (or a hook) can
+verify, which is exactly the property a closed, self-grading loop needs most.
+
+---
+
 ## The Gate Card
 
 Every significant decision leaves one. It is short, glanceable, and stamped — the
@@ -141,25 +159,38 @@ you will ever make.
 
 ---
 
-## The adversarial pass — red-team before you stamp SHIP
+## The adversarial pass — an isolated Adversary, not a self-pass
 
 You are both the one who proposes the decision and the one who grades it — a closed
-loop with no outside check. So before a significant card is stamped **SHIP**, turn
-on yourself for one honest pass and *attack the card*:
+loop with no outside check. And a model grading its own work mostly passes its own
+gates; sycophancy is the default failure. So before a significant card is stamped
+**SHIP**, run a real red-team — and make it as *external* as your harness allows:
 
-- **Which rung is inflated?** Find the gate most likely claiming more evidence than
-  it has, and knock it down a rung unless it truly holds.
+- **Default (strongest) — spawn an isolated Adversary.** A sub-agent in a **fresh
+  context** that sees only the *stripped* decision + the Gate Card — not your
+  reasoning, not your justifications — with one job: **attack it.** The fresh
+  context is the whole point: a mind that didn't build the card has nothing
+  invested in defending it, so it isn't sycophantic to your prior thinking. Invoke
+  **`/adversary`** (`.claude/commands/adversary.md`), or run it as a one-mind
+  Simulation. Where sub-agents aren't available, use a **separate fresh
+  conversation** (fresh = isolated).
+- **Fallback — the self-pass.** If you genuinely can't isolate, attack your own card
+  in one honest pass. Better than nothing; weaker than a mind that didn't write it.
+
+Either way, the Adversary runs three questions:
+
+- **Which rung is inflated?** Find the gate claiming more evidence than it can
+  *cite*, and knock it down a rung unless it truly holds.
 - **What's the strongest case for KILL?** Argue, in good faith, why this should not
   exist. If the case is even half-convincing, you have not earned SHIP.
 - **What did we not consider?** The user on their worst day, the failure mode, the
   cheaper thing that makes this unnecessary.
 
-Then revise the card with what you found. This is cheap, it's fast, and it's the
-nearest thing to the external grader the system lacks (the founder is the real one
-— see `../methods/README.md`). It exists because models are sycophantic and
-confident: this pass is where the framework catches *itself* shipping the unproven,
-and it's how the KILL muscle actually gets used instead of admired. Keep it brief,
-and run it on significant cards — not on right-sized small work.
+Then revise the card with what it found. This is the nearest thing to the external
+grader the system lacks (the founder is the real one — see `../methods/README.md`).
+It's where the framework catches *itself* shipping the unproven, and how the KILL
+muscle gets used instead of admired. Keep it brief, and run it on significant cards
+— not on right-sized small work.
 
 ---
 
@@ -182,11 +213,19 @@ prompt and a system that learns.
 
 ## Optional: enforce it with the harness
 
-The card is enforced by discipline by default — no card, not done. If you want the
-machine to hold the line, wire a reminder into your agent harness (e.g. a Claude
-Code `SessionStart` hook or a pre-commit check) that refuses to call a significant
-change "done" until a Gate Card exists and names a rung above ASSERTED. The Ritual
-ships pure and portable; the enforcement hook is a power-up you add per repo.
+The card is enforced by discipline by default — no card, not done. Two of those
+disciplines are mechanical enough to automate when you want the machine to hold the
+line:
+
+- **Cite-or-downgrade** — a check (pre-commit, or a hook) that scans a card for a
+  TESTED/OBSERVED rung with no cited artifact and flags it back down to REASONED.
+- **The isolated Adversary** — `/adversary` makes the red-team a separate agent,
+  not a self-pass; wire it into the path to "done" on significant changes.
+
+A lighter version: a `SessionStart` hook or pre-commit check that refuses to call a
+significant change "done" until a Gate Card exists and names a rung above ASSERTED.
+The Ritual ships pure and portable; these enforcement hooks are power-ups you add
+per repo.
 
 ---
 
@@ -194,6 +233,10 @@ ships pure and portable; the enforcement hook is a power-up you add per repo.
 
 - Every significant decision produces a Gate Card in `docs/decisions/`.
 - Each gate names a verdict **and** an evidence rung, honestly.
+- Every TESTED/OBSERVED rung **cites the artifact** that earns it — else it's
+  downgraded to REASONED and the gap is owed to reality.
+- A significant card faced an **isolated Adversary** (`/adversary`) before SHIP, and
+  was revised with what it found.
 - The five-second gate is a real line under desirable.
 - KILL is available, used when earned, and recorded as a win.
 - Verification debt (gates at REASONED) is written down and paid before scale.

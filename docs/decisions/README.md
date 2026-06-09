@@ -26,13 +26,21 @@ falsified claim.**
   method visible. Rigor reads as confidence; disclaimers read as doubt. *(Card 0001 · the benchmark section)*
 - **Never fake a rung — even in marketing.** The storefront is held to the same
   evidence ladder as the framework. *(Card 0001)*
+- **Turn vibes into mechanisms.** The framework is strongest where it's mechanical
+  (the Ratchet, the isolated Simulation) and weakest where it's faith (self-grading,
+  personas, asserted right-sizing). Prefer a check over more prose telling the model
+  to behave: cite-or-downgrade, the isolated Adversary, the self-test harness. *(Card 0002)*
+- **The grader can't be the graded.** Red-team from a *fresh, isolated* context
+  (`/adversary`), not a self-pass — a model defending its own card mostly passes. *(Card 0002)*
 
 ## Open debts (owed to reality)
 
 | Debt | Gate / Card | Evidence owed | Owner |
 |------|-------------|---------------|-------|
-| Framework efficacy at TESTED, not OBSERVED | Card 0001 · Feasible/Desirable | a larger, **fully-blind** A/B + **real users** judging live decisions | founder |
+| Framework efficacy at TESTED, not OBSERVED | Card 0001 · Feasible/Desirable | a larger, **fully-blind** A/B + **real users** judging live decisions — run `/prove-it` | founder |
+| The hardening changes are claimed, not measured | Card 0002 · Desirable | run `bench/` to show the Adversary + cite-or-downgrade change what ships, and the persona ablation result | founder/eng |
 | Integration installs unproven on live nodes | integrations/ (openclaw, hermes, cowork) | run each install against a real instance → REASONED → TESTED | founder/eng |
+| `/adversary` + `/prove-it` unrun end-to-end | Card 0002 · Feasible | spawn the sub-agents in a live session once | founder/eng |
 
 ## Kills & falsifieds (do not re-open)
 

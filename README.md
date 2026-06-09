@@ -190,8 +190,10 @@ kickoff/
 ├── methods/             The council of five + the engine that keeps them coherent.
 ├── framework/           Depth for each step — loaded on demand, never all at once.
 ├── templates/           CLAUDE.md, North Star, brand, value prop, PRD, UX, Gate Card, Proof, Ledger, Heading.
-├── .claude/             The Ratchet — a SessionStart hook that re-injects the Heading + memory.
-├── integrations/        Opt-in adapters to run the Ritual on other platforms (Cursor, Cowork, raw API…).
+├── .claude/             The Ratchet (SessionStart hook) + commands: /adversary, /prove-it, /simulation-ritual, /weave-ritual.
+├── integrations/        Opt-in adapters to run the Ritual on other platforms (Cursor, Cowork, OpenClaw, Hermes…).
+├── bench/               The self-test harness — fixed rubric + briefs that put the framework's own claim on trial.
+├── docs/                The Ritual dogfooding itself — its North Star, decision ledger, and Gate Cards.
 └── example/             A real brief run end to end — including a stamped Gate Card.
 ```
 

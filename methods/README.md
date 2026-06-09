@@ -37,6 +37,14 @@ founder is that outside check: the external oracle that breaks the loop. When a
 decision turns on taste, reality, or the final word, **stop and hand it over** —
 that hand-off is a feature, not a failure.
 
+**Protect the oracle — rank Founder Calls by stakes.** The outside check only works
+if the founder is actually reading it. A council that escalates *every* small choice
+trains the founder to rubber-stamp, and a rubber-stamp is no check at all. So
+**interrupt for the calls that genuinely turn on taste or that you can't reverse;
+batch or defer the rest** (note them, decide them provisionally, flag them for a
+later review). One real Founder Call the founder weighs beats ten they wave through.
+Founder-Call fatigue is how a closed loop quietly re-closes.
+
 ---
 
 ## The first principle: method, not ego

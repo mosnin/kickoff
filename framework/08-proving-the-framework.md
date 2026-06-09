@@ -17,21 +17,38 @@ Falsifiable form, pick the threshold that matters to you:
 If that fails, the framework is not earning its weight on that kind of work, and
 you should know it.
 
-## The test: a blind A/B
+## The test: a blind A/B (run it with the harness)
 
-The only honest way to move the claim from REASONED to OBSERVED:
+The apparatus is built and repeatable: **`bench/`** holds the fixed rubric, the
+standing brief set, and the results template; **`/prove-it`** orchestrates a run.
+Use them so "does it work?" is answered the same way every time. The protocol:
 
-1. **Pick a real brief** — one of your actual product decisions, not a toy.
-2. **Produce two outputs.** **A:** baseline — the brief to a clean model, no
-   Ritual. **B:** the brief run through the Ritual (frame → gates → Gate Card).
-   Same model, same effort budget, same brief.
-3. **Strip the tells.** Remove the Gate Card scaffolding, the method names, the
-   process narration from B — judge the *decision and the artifact*, not the
+1. **Pick a real brief** — one of your actual product decisions, not a toy. The
+   set in `bench/briefs.md` mixes **easy and hard** on purpose (see ceremony tax,
+   below).
+2. **Produce the conditions, each isolated.** **A:** baseline — the brief to a
+   clean model, no Ritual. **B:** the brief run through the Ritual. **C
+   (ablation):** the gates + evidence ladder **without** the five named methods —
+   the test of whether the personas change the *decision* or only the voice. Same
+   model, same effort, same brief; no condition sees another.
+3. **Strip the tells.** Remove the Gate Card scaffolding, method names, and process
+   narration from B and C — judge the *decision and the artifact*, not the
    paperwork. (Process narration is not the product; don't let it bias the judge.)
-4. **Blind-judge.** Someone who can't see which is which — ideally a real target
-   user — picks the better one and says why, on taste and on substance.
-5. **Repeat** across a handful of briefs. One trial is an anecdote; a pattern is
-   evidence.
+4. **Blind-judge** against `bench/rubric.md`. A judge who can't see which is which —
+   ideally a real target user — scores each and picks the best, on taste and substance.
+5. **Repeat and record.** Log every run in `bench/results.md`. One trial is an
+   anecdote; a pattern is evidence.
+
+## Two things the harness also measures (cheaply, for free)
+
+- **The ceremony tax.** Run the Ritual on *easy* briefs too. The framework predicts
+  it should roughly **tie** there and pull ahead on hard ones — if it *loses* on
+  easy briefs, the ceremony is taxing work it isn't for, and right-sizing isn't
+  biting. That's a finding, not a footnote.
+- **The persona ablation (B vs C).** If gates-only (C) scores ≈ the full Ritual (B),
+  the five named methods aren't changing the decision for the model — cut them from
+  the operative core (the framework's own "best part is no part"). If B > C, the
+  personas earn their place *with evidence.*
 
 ## Record it as the Ritual's own Gate Card
 
@@ -59,6 +76,9 @@ Stamp the result like any other decision (`templates/gate-card.md`), in
 ## Done when
 
 - The efficacy claim is written in falsifiable form with a threshold.
-- At least one blind A/B on a real brief has been run and recorded as a Gate Card.
+- At least one blind A/B on a real brief has been run via `bench/` / `/prove-it`
+  and recorded — both in `bench/results.md` and as Gate Card 0001.
+- Every published efficacy number traces to a recorded run (cite or downgrade).
+- The ceremony tax and the persona ablation have been looked at, not just assumed.
 - The Ritual's scope is set by evidence: used where it wins, trimmed where it
   doesn't.

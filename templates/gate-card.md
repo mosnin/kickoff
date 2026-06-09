@@ -9,13 +9,17 @@ Date: YYYY-MM-DD · Verdict: **SHIP | LOOP | KILL** · Led by: <method>
 
 ## The gates
 
-| Gate | Owner | Verdict | Rung | Evidence (what actually backs this) |
+> **Cite or downgrade:** a TESTED/OBSERVED rung must cite the artifact that earns it
+> (a command output, a file, a number with its source, a watched first-run). No
+> citation → drop it to REASONED and record the gap under *owed to reality.*
+
+| Gate | Owner | Verdict | Rung | Evidence + citation (what actually backs this, and where to look) |
 |------|-------|---------|------|-------------------------------------|
-| **Desirable** | vision · human | PASS/FAIL | OBSERVED | *the observed reaction — not an opinion about one* |
-| ↳ 5-second gate | vision | PASS/FAIL | TESTED | *is the opening moment proven? how?* |
-| **Feasible** | engineer | PASS/FAIL | TESTED | *what ran — spike, test, benchmark vs. the real constraint* |
-| **Deliverable** | producer | PASS/FAIL | REASONED | *did the path reproduce? how many times?* |
-| **Viable** | banker | PASS/FAIL | TESTED | *the number, computed from real inputs* |
+| **Desirable** | vision · human | PASS/FAIL | OBSERVED | *the observed reaction — not an opinion about one (cite the session/number)* |
+| ↳ 5-second gate | vision | PASS/FAIL | TESTED | *is the opening moment proven? how? (cite it)* |
+| **Feasible** | engineer | PASS/FAIL | TESTED | *what ran — spike, test, benchmark vs. the real constraint (cite the run)* |
+| **Deliverable** | producer | PASS/FAIL | REASONED | *did the path reproduce? how many times? (cite the runs)* |
+| **Viable** | banker | PASS/FAIL | TESTED | *the number, computed from real inputs (cite the inputs)* |
 
 ## The synthesis
 
@@ -23,11 +27,12 @@ Date: YYYY-MM-DD · Verdict: **SHIP | LOOP | KILL** · Led by: <method>
 - **Tension:** *where methods genuinely conflicted*
 - **Tie-break:** *if two paths both passed — how vision chose; else "converged"*
 
-## Red-team (one adversarial pass before SHIP)
+## Red-team (an isolated Adversary before SHIP — `/adversary`, not a self-pass)
 
-- **Most-inflated rung:** *the gate claiming more evidence than it has — knocked down, or defended*
+- **Most-inflated rung:** *the gate claiming more evidence than it can cite — knocked down, or defended*
 - **Strongest case for KILL:** *argue in good faith why this shouldn't exist; if half-convincing, don't SHIP*
 - **What we missed:** *the worst-day user, the failure mode, the cheaper thing that makes this unnecessary*
+- **Adversary:** *isolated agent / self-pass — which ran, and what it changed*
 
 ## Verdict & debt
 

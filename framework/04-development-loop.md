@@ -25,6 +25,12 @@ When unsure, treat it as a decision and run the arc. This keeps the rigor where 
 pays and lifts the tax where it doesn't — the framework should never slow down the
 work it isn't for.
 
+> **Log the call in one line, so the tax is measurable.** When you right-size *out*,
+> say so: `Right-sized: execution — skipped the gates.` When you run the arc, the
+> Gate Card already records it. Those one-liners are countable: if the model almost
+> never right-sizes out, the ceremony tax is real and this triage isn't biting —
+> a thing to catch, not assume. (`bench/` measures the same tax on easy briefs.)
+
 ## The cycle
 
 One unit of work — a feature, a flow, a decision — flows through the arc in this
